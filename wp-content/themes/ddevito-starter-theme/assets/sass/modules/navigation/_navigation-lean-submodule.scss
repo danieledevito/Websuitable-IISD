@@ -1,0 +1,95 @@
+/* =========================================================
+    primaryMenu
+
+    Lean Navigation Extension to primaryMenu main module.
+========================================================= */
+
+.primaryMenu {
+
+  /* Block Level */
+
+  /* Elements */
+  .menu-item a {
+    color: #fff;
+    text-transform: uppercase;
+  }
+
+  /* Modifiers */
+
+  /* ---------------------------------------------------------- */
+  /* =======================  Media Queries ======================= */
+  /* ---------------------------------------------------------- */
+
+  @include breakpoint(medium) {
+
+  }
+
+  @include breakpoint(large) {
+
+    /* Elements */
+
+    .menu-item {
+
+      a {
+        //border-radius: 4px;
+        //margin-right: 5px;
+        //background: $primary-color;
+        border-bottom: 1px solid transparent;
+        color: $primary-color;
+        transition-duration: 400ms;
+
+        &:hover,
+        &:focus {
+          //background: scale_color($primary-color, $lightness: -50%);
+          border-bottom: 1px solid $primary-color;
+        }
+      }
+
+      > a {
+        padding: 0.7rem 1.5rem;
+      }
+
+      &:last-of-type a {
+        margin-right: 0;
+      }
+    }
+
+    .menu .active > a {
+      //background: none;
+      border-bottom: 1px solid $primary-color;
+    }
+
+    /*
+      Hide the bottom border when there's a dropdown menu.
+      The border looks weird with the dropdown there.
+    */
+    .primary-menu > .dropdown.menu > .menu-item.has-dropdown a {
+      &:hover,
+      &:focus {
+        border-bottom: 1px solid transparent;
+      }
+    }
+
+    .is-dropdown-submenu {
+      background: transparentize($secondary-color, 0.2);
+    }
+
+    .dropdown.menu>li.is-dropdown-submenu-parent>a {
+      padding-right: 2.5rem;
+    }
+
+    .dropdown.menu>li.is-dropdown-submenu-parent>a::after {
+      border-color: #fff transparent transparent;
+      margin-right: 10px;
+      margin-left: 10px;
+    }
+
+    .is-dropdown-submenu .is-dropdown-submenu-parent.opens-right>a::after {
+      border-color: transparent transparent transparent #fff;
+    }
+
+
+
+  }
+
+} /* end .primaryMenu.lean submodule */

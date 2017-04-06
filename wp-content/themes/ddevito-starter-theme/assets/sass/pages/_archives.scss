@@ -1,0 +1,40 @@
+.blog,
+.archive,
+.search-results {
+
+  h2 {
+    font-size: 1.5rem;
+
+  }
+
+  article,
+  .site-main .widget_categories {
+    border-bottom: 1px solid #ddd;
+    padding: ($space /2) 0;
+    margin-bottom: $space /2;
+
+  }
+
+  article:last-of-type {
+    border: none;
+  }
+
+  .entry-meta {
+  }
+
+
+  /* Category Filter dropdown */
+  .site-main {
+    .widget_categories {
+
+      h2 {
+        display: inline-block;
+      }
+      select {
+        margin-left: 20px;
+        width: 50%;
+      }
+    }
+  } /* end cat filter dropdown*/
+
+} /* end blog page styles*/

@@ -1,0 +1,66 @@
+
+/* ==
+---- 		Common paginate_links styles:
+========================================== */
+
+.nav-links {
+  &.row {
+    margin: 0;
+  }
+}
+
+.paging-navigation {
+  .page-numbers {
+
+    @include pagination_style;
+
+    &.current {
+      background: $primary-color;
+      color: #fff;
+    }
+
+    .prev-link,
+    .next-link {
+      margin: 0 0.5rem;
+
+    }
+
+    .fa {
+      color: $primary-color;
+    }
+  }
+}
+
+.single-post-navigation {
+
+  a {
+    display: inline-block;
+    width: 75%;
+
+  }
+
+  .single_post_navigation__heading {
+    display: block;
+    color: $primary-color;
+  }
+
+  .single_post_nagivation__title {
+    font-size: 1rem;
+  }
+
+  .row .row {
+    margin: 0;
+  }
+
+  .columns {
+    padding: 0;
+    margin-bottom: $space /2;
+  }
+
+  .next,
+  .prev {
+    @include pagination_style;
+    display: inline-block;
+
+  }
+}

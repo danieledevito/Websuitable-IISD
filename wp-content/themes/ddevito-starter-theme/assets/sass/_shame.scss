@@ -1,0 +1,7 @@
+body {
+	position: inherit; // Fixed the admin bar
+}
+
+article.sticky {
+	position: static; // Fix Foundation's treatment of sticky
+}

@@ -1,0 +1,31 @@
+.widget-area {
+	background: $background;
+	padding: 2em;
+
+	h2 {
+		font-size: 1.25rem;
+		font-weight: 400;
+	}
+
+	ul {
+		list-style-type: none;
+		margin: 0;
+
+		li {
+			margin-bottom: $space /4;
+		}
+	}
+
+
+	.widget {
+		margin-bottom: $space /2;
+	}
+}
+
+.widget_nav_menu {
+	.menu li {
+		display: inline-block;
+		width: 100%;
+		margin-bottom: 0;
+	}
+}

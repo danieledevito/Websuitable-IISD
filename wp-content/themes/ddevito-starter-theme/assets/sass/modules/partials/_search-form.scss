@@ -1,0 +1,86 @@
+/* =========================================================
+    searchForm
+
+
+========================================================= */
+
+.searchForm {
+
+  /* Block Level */
+
+
+
+  /* Elements */
+  .search-form {
+
+    display: inline-block;
+    height: 50px;
+    text-align: left;
+
+    label{
+      margin-top: -25px;
+    }
+
+    ::-webkit-input-placeholder {
+      //color: #fff;
+    }
+
+    :-moz-placeholder { /* Firefox 18- */
+      //color: #fff;
+    }
+
+    ::-moz-placeholder {  /* Firefox 19+ */
+      //color: #fff;
+    }
+
+    :-ms-input-placeholder {
+      //color: #fff;
+    }
+  }
+
+  .search-form:before {
+    font-family: 'FontAwesome';
+    content: "\f002";
+    color: #222;
+    font-size: 1.25rem;
+    position: relative;
+    top: 8px;
+    left: 5px;
+  }
+
+  input[type="search"],
+  input[type="search"]:focus,
+  input[type="search"]:active {
+    border: none;
+    background: transparent;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    letter-spacing: 2px;
+    padding-left: 40px;
+    transition: border-color 500ms ease-in-out;
+    text-transform: uppercase;
+
+    &:hover,
+    &:focus {
+      border-color: $primary-color;
+    }
+
+  }
+
+  /* Modifiers */
+
+  /* ---------------------------------------------------------- */
+  /* =======================  Media Queries ======================= */
+  /* ---------------------------------------------------------- */
+
+  @include breakpoint(medium) {
+
+  }
+
+  @include breakpoint(large) {
+
+  }
+
+}

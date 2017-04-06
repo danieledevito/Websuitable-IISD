@@ -1,0 +1,24 @@
+
+#greySkew{
+  display: none;
+  position: absolute;
+  top: 0;
+  left: -80%;
+  height: 100%;
+  width: 100%;
+  background: $gray;
+  -webkit-transform: skewX(-30deg);
+  -moz-transform: skewX(-30deg);
+  -ms-transform: skewX(-30deg);
+  -o-transform: skewX(-30deg);
+  transform: skewX(-30deg);
+  z-index: -1;
+
+}
+
+@media (min-width: 1200px) {
+  #greySkew{display: block;}
+  #page{
+    margin-top: 3rem;
+  }
+}

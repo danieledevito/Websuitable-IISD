@@ -1,0 +1,23 @@
+// Base Typography found in _settings.scss file.
+
+/* To avoid adding some top padding when not needed,
+add some space above those headers that immediately follow these tags: */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+ul,
+ol,
+img {
+  + {
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      padding-top: 1em;
+    }
+  }
+}

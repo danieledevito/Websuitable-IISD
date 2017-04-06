@@ -1,0 +1,11 @@
+.sass-cache
+composer.lock
+assets/components
+assets/dist
+assets/images
+!assets/dist/js/app.js
+vendor
+node_modules
+npm-debug.log
+.DS_Store
+assets/images/vertical-images

@@ -1,0 +1,60 @@
+.sub-footer {
+  @include grid-row();
+
+  /* Block Level */
+  .sub-footer__inner {
+    @include grid-column(12);
+    border-top: 2px solid $dark-blue;
+    border-bottom: 2px solid $dark-blue;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    ul{
+      text-align: center;
+      li{
+        display: block;
+        a{
+          text-transform: uppercase;
+          color: #000;
+          &:hover{
+            color: #000;
+          }
+        }
+      }
+    }
+  }
+  @include breakpoint(medium) {
+    .sub-footer__inner {
+      ul li{
+        @include grid-column(6);
+      }
+    }
+  }
+
+  @include breakpoint(large) {
+    .sub-footer__inner {
+      ul li{
+        @include grid-column(3);
+      }
+    }
+  }
+}
+
+.siteFooter{
+
+  .siteFooter__inner{
+    @include grid-row();
+    .projectBy, .participationWith{
+      @include grid-column(12);
+    }
+    .projectBy span{
+      text-transform: uppercase;
+    }
+  }
+
+  @include breakpoint(large){
+    .projectBy, .participationWith{
+      @include grid-column(6);
+    }
+  }
+}
+/* end .siteFooter module */

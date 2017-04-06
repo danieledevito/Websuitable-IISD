@@ -1,0 +1,210 @@
+/* ==
+---- 		Layout
+========================================== */
+
+/*
+  Table of Contents:
+
+  1. Page - .tbsc-page - layout for pages.
+  2. Front Page Layout - .tbsc-front-page
+  3. Archive Pages - .tbsc-archive
+  4. Home Page - .tbsc-posts-page
+  5. Single Posts - .tbsc-single-post
+  6. Narrow Full Width Page Template - .tbsc-narrow-full-width
+  7. Full Width Template - .tbsc-full-width
+
+  Guide to Foundation Mixins for Layout
+
+  @link http://foundation.zurb.com/sites/docs/grid.html
+
+  grid-row()        - Use to constrain the page width. May or may not have child elements set as grid-column.
+  grid-column()     - Must be used within a grid-row() context.
+  clearfix()        - Use on a container section / div to simply clear floats within.
+  grid-column-row() - ONLY use if nested within a parent element styled with grid-row(); otherwise use grid-row() to constrain width. This has the most predictable results.
+
+
+*/
+
+.inner-page-wrap {
+  padding: ($space/2) 0;
+}
+
+/* ---------------------------------------------------------- */
+/* ======================= 1. Page ======================= */
+/* ---------------------------------------------------------- */
+
+.tbsc-page {
+
+  .inner-page-wrap {
+    @include grid-row();
+
+  }
+
+  #main {
+    @include grid-column();
+  }
+
+  #right-sidebar {
+    @include grid-column();
+  }
+
+  @include breakpoint(large) {
+    #main {
+      @include grid-column(8);
+    }
+
+    #right-sidebar {
+      @include grid-column(4);
+    }
+  }
+}
+
+/* 404 Page */
+
+.tbsc-404 {
+  .inner-page-wrap {
+    @include grid-row();
+
+  }
+
+  #main {
+    @include grid-column();
+  }
+
+
+  @include breakpoint(medium) {
+    #main {
+      @include grid-column(8);
+      @include grid-column-position(center);
+    }
+
+  }
+}
+
+/* ---------------------------------------------------------- */
+/* ======================= 2. Front Page Layout ======================= */
+/* ---------------------------------------------------------- */
+
+.tbsc-front-page {
+  .inner-page-wrap {
+    @include clearfix(); // Don't use grid-row. Want full width on everything by default.
+    padding-top: 0; // don't need top padding for the front page.
+  }
+}
+
+/* ---------------------------------------------------------- */
+/* ======================= 3. Archive Pages ======================= */
+/* ---------------------------------------------------------- */
+
+.tbsc-archive {
+  .inner-page-wrap {
+    @include grid-row();
+
+  }
+
+  // Make cpt posts single column and narrow
+  #main {
+    @include grid-column(); // required for inner padding.
+  }
+
+  @include breakpoint(medium) {
+    #main {
+      @include grid-column(8);
+      @include grid-column-position(center);
+    }
+  }
+}
+
+/* ---------------------------------------------------------- */
+/* ======================= 4. Home Page / Posts Page ======================= */
+/* ---------------------------------------------------------- */
+
+.tbsc-posts-page {
+  .inner-page-wrap {
+    @include grid-row();
+
+  }
+
+  // Make cpt posts single column and narrow
+  #main {
+    @include grid-column(); // required for inner padding.
+  }
+
+  @include breakpoint(medium) {
+    #main {
+      @include grid-column(8);
+      @include grid-column-position(center);
+    }
+  }
+}
+
+/* ---------------------------------------------------------- */
+/* ======================= 5. Single Posts ======================= */
+/* ---------------------------------------------------------- */
+
+
+.tbsc-single-post {
+  .inner-page-wrap {
+    @include grid-row();
+
+  }
+
+  // Make cpt posts single column and narrow
+  #main {
+    @include grid-column(); // required for inner padding.
+  }
+
+  @include breakpoint(medium) {
+    #main {
+      @include grid-column(8);
+      @include grid-column-position(center);
+    }
+  }
+
+  //#left-sidebar {
+  //  @include grid-column(3, 100);
+  //}
+  //#main {
+  //  @include grid-column(8, 100);
+  //}
+  //
+  //#right-sidebar {
+  //  @include grid-column(4, 100);
+  //}
+}
+
+/* ---------------------------------------------------------- */
+/* ======================= 6. Narrow Full Width Page Template ======================= */
+/* ---------------------------------------------------------- */
+
+.tbsc-narrow-full-width {
+  .inner-page-wrap {
+    @include grid-row();
+
+  }
+
+  #main {
+    @include grid-column(); // required for inner padding.
+  }
+
+  @include breakpoint(medium) {
+    #main {
+      @include grid-column(8);
+      @include grid-column-position(center);
+    }
+  }
+}
+
+/* ---------------------------------------------------------- */
+/* ======================= 7. Full Width Template ======================= */
+/* ---------------------------------------------------------- */
+
+.tbsc-full-width {
+  .inner-page-wrap {
+    @include grid-row(); // Don't use grid-row. Want full width on everything by default.
+
+  }
+
+  #main {
+  }
+}

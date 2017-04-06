@@ -1,0 +1,31 @@
+{
+  "name" 			: "pwho_cpt",
+  "description" 	: "PWHO CPT Plugin",
+  "type"          : "project",
+  "keywords" 		: ["wordpress", "theme", "wp", "plugin"],
+  "homepage" 		: "http://patrickwho.me",
+  "license" 		: "GPL-2.0+",
+  "authors": [
+    {
+      "name" 	: "PWHO",
+      "email" : "patrick@patrickwho.me"
+    }
+  ],
+  "require": {
+    "php" : ">=5.4.0"
+  },
+  "autoload" : {
+    "psr-4": {
+      "TBSC_CPT\\": "src/"
+    }
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "1.0-dev"
+    }
+  },
+  "config": {
+    "vendor-dir": "vendor"
+  },
+  "minimum-stability": "dev"
+}

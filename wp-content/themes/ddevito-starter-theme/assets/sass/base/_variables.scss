@@ -1,0 +1,12 @@
+
+$breakpoint-default: 800px; // default media query breakpoint
+$size-default-width: 1024px; // default width of block level elements
+
+$space: 4rem;
+
+$light_text: $dark-gray;
+
+$dark_text: $black;
+
+$background: $gray;
+$background-hover: scale_color($background, $lightness: 15%);

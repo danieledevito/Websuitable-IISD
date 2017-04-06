@@ -1,0 +1,235 @@
+/* Gravity Forms
+----------------------*/
+
+@media screen and (max-width: 400px) {
+  .gform_wrapper .top_label li.gfield.gf_left_half,
+  .gform_wrapper .top_label li.gfield.gf_right_half {
+    display: block !important;
+  }
+
+  .gform_wrapper .top_label li.gfield.gf_left_half,
+  .gform_wrapper .top_label li.gfield.gf_right_half {
+    width: 100% !important;
+
+  }
+}
+
+/* Padding fields */
+.gform_wrapper {
+  input[type=email],
+  input[type=number],
+  input[type=password],
+  input[type=tel],
+  input[type=text],
+  input[type=url],
+  textarea {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+}
+
+/* General Styles for Everyone GFORM */
+.gform_wrapper {
+
+  select,
+  input:not( .button ),
+  textarea {
+    border-radius: 10px;
+
+  }
+
+  input[type="submit"] {
+    background: $secondary-color;
+  }
+
+  .ginput_container {
+
+    input::-webkit-input-placeholder {
+      color: $dark-text;
+      font-size: 0.899rem;
+    }
+    input::-moz-placeholder {
+      color: $dark-text;
+      font-size: 0.899rem;
+    }
+    input:-moz-placeholder { /* Older versions of Firefox */
+      color: $dark-text;
+      font-size: 0.899rem;
+    }
+    input:-ms-input-placeholder {
+      color: $dark-text;
+      font-size: 0.899rem;
+    }
+
+    label {
+      color: $dark-text;
+      font-size: 1rem;
+    }
+
+    textarea::-webkit-input-placeholder {
+      color: $dark-text;
+    }
+    textarea::-moz-placeholder {
+      color: $dark-text;
+    }
+    textarea:-moz-placeholder  {
+      color: $dark-text;
+    }
+    textarea:-ms-input-placeholder {
+      color: $dark-text;
+    }
+
+  }
+}
+/* ==
+---- 		Custom classes:
+========================================== */
+
+.form-centered-submit {
+  .gform_wrapper {
+
+    .gform_footer {
+      text-align: center;
+    }
+  }
+}
+
+/* If the form has a background */
+.form-with-background {
+  .gform_wrapper {
+
+    background: transparent;
+    padding: 10px;
+
+    .gform_title,
+    .gform_description {
+      color: #fff;
+    }
+
+    select,
+    input:not( .button ),
+    textarea {
+      border: none;
+      border-bottom: 1px solid #fff;
+      background: transparent;
+      color: #fff;
+      padding: .313em 0.8em !important;
+
+      &:active,
+      &:focus {
+        border-color: $primary-color;
+
+      }
+
+    }
+
+    input[type="submit"] {
+      text-transform: uppercase;
+    }
+
+    input:not( .button ) {
+      box-shadow: none;
+    }
+
+    input.button {
+      border-radius: 4px;
+      margin-bottom: 0;
+    }
+
+    .gform_footer {
+      padding-top: 0;
+      margin-top: 0;
+
+    }
+
+    .ginput_container {
+
+      input::-webkit-input-placeholder {
+        color: #fff;
+        font-size: 0.899rem;
+      }
+      input::-moz-placeholder {
+        color: #fff;
+        font-size: 0.899rem;
+      }
+      input:-moz-placeholder { /* Older versions of Firefox */
+        color: #fff;
+        font-size: 0.899rem;
+      }
+      input:-ms-input-placeholder {
+        color: #fff;
+        font-size: 0.899rem;
+      }
+
+      label {
+        color: #fff;
+        font-size: 1rem;
+      }
+
+    }
+  }
+}
+
+/* Hide the labels */
+.form-hide-labels {
+
+  /* General styles for ALL forms
+  - hide labels
+  - remove all but bottom border for input fields
+  - adjusts the submit button
+  */
+  .gform_wrapper .top_label .gfield_label {
+    color: #fff;
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+  }
+}
+
+/* Limit the field width */
+.form-limit-field-width {
+  .gform_wrapper {
+    select,
+    input:not( .button ),
+    textarea {
+      max-width: 400px;
+
+    }
+  }
+}
+
+/* ==
+---- 		Styles for the select field.
+========================================== */
+
+.gform_wrapper ul.gform_fields li.gfield select {
+  color: $dark-text;
+
+  > option:first-of-type:after {
+    font-family: 'FontAwesome';
+    content: "\f078";
+  }
+}
+
+/* ==
+---- 		Gravity Forms in the Page Content
+========================================== */
+
+.entry-content {
+
+}
+
+// end Gravity Forms
+
+/* Demo Modal form styles */
+
+#tbscDemoModal {
+  max-width: 500px;
+
+  .gform_wrapper input.button {
+    margin-top: $space / 2;
+    width: 98%;
+  }
+}

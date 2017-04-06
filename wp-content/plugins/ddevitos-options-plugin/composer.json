@@ -1,0 +1,28 @@
+{
+  "name" 			: "tbsc/tbsc_options",
+  "description" 	: "TBSC Options Plugin",
+  "type"          : "project",
+  "keywords" 		: ["wordpress", "theme", "wp", "plugin"],
+  "homepage" 		: "http://patrickwho.me",
+  "license" 		: "GPL-2.0+",
+  "authors": [
+    {
+      "name" 	: "Patrick",
+      "email" : "patrick@patrickwho.me"
+    }
+  ],
+  "require": {
+    "php" : ">=5.4.0"
+  },
+  "autoload" : {
+    "psr-4": {
+      "TBSC_Options\\": "src/"
+    }
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "1.0-dev"
+    }
+  },
+  "minimum-stability": "dev"
+}

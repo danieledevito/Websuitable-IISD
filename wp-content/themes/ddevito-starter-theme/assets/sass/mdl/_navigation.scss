@@ -1,0 +1,41 @@
+.main-mdl-menu {
+  list-style-type: none;
+  margin: 0;
+
+  /* Drilldown Menu - Foundation */
+
+  .js-drilldown-back {
+    a {
+      display: block;
+      flex-shrink: 0;
+      padding: 16px 40px;
+      margin: 0;
+    }
+  }
+
+  .is-drilldown-submenu {
+    margin: 0;
+    display: none;
+    //transition-duration: 700ms;
+
+    &.is-active {
+      display: block;
+      @include mui-animation(slide($state: in, $direction: right, $amount: -120%));
+    }
+  }
+}
+
+.mdl-navigation {
+  overflow: visible;
+
+  .is-drilldown {
+    overflow: visible;
+    //overflow-x: hidden;
+
+    li {
+      background: #fff;
+      position: relative;
+      //overflow: hidden;
+    }
+  }
+}

@@ -1,0 +1,161 @@
+/* =========================================================
+    socialProfiles
+
+
+========================================================= */
+
+.socialProfiles {
+
+  /* Block Level */
+
+  /* Elements */
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    height: 100%;
+  }
+
+  li {
+    display: inline-block;
+    text-align: center;
+  }
+
+  a {
+
+    background: $gray;
+    border-radius: 50%;
+
+    margin-right: 5px;
+    padding: 0 !important;
+    position: relative;
+
+    height: 35px;
+    width: 35px;
+
+    transition: 300ms ease-in-out;
+
+    &:before {
+      color: #fff;
+
+      position: absolute;
+      top: 25%;
+      left: 25%;
+
+      font-family: 'Fontawesome';
+      font-size: 1.2rem;
+      vertical-align: top;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    &:hover ,
+    &:focus  {
+      background: #fff;
+
+      &:before {
+        color: $body-font-color;
+      }
+    }
+  }
+
+  /* Modifiers */
+
+  /* ---------------------------------------------------------- */
+  /* =======================  Media Queries ======================= */
+  /* ---------------------------------------------------------- */
+
+  @include breakpoint(medium) {
+
+  }
+
+  @include breakpoint(large) {
+
+  }
+
+}
+
+
+/* ==
+---- 		Social Media Menu Icons
+========================================== */
+
+.social-links li a[href*="dribbble.com"]::before {
+  content: '\f17d';
+}
+
+.social-links li a[href*="facebook.com"]::before {
+  content: '\f09a';
+}
+
+.social-links li a[href*="flickr.com"]::before {
+  content: '\f16e';
+}
+
+.social-links li a[href*="foursquare.com"]::before {
+  content: '\f180';
+}
+
+.social-links li a[href*="github.com"]::before {
+  content: '\f09b';
+}
+
+.social-links li a[href*="plus.google.com"]::before {
+  content: '\f0d5';
+}
+
+.social-links li a[href*="instagram.com"]::before {
+  content: '\f16d';
+}
+
+.social-links li a[href*="jsfiddle.com"]::before {
+  content: '\f1cc';
+}
+
+.social-links li a[href*="linkedin.com"]::before {
+  content: '\f0e1';
+}
+
+.social-links li a[href*="pinterest.com"]::before {
+  content: '\f0d2';
+}
+
+.social-links li a[href*="reddit.com"]::before {
+  content: '\f1a1';
+}
+
+.social-links li a[href*="soundcloud.com"]::before {
+  content: '\f1be';
+}
+
+.social-links li a[href*="stackoverflow.com"]::before {
+  content: '\f16c';
+}
+
+.social-links li a[href*="tumblr.com"]::before {
+  content: '\f173';
+}
+
+.social-links li a[href*="twitter.com"]::before {
+  content: '\f099';
+}
+
+.social-links li a[href*="vimeo.com"]::before {
+  content: '\f194';
+}
+
+.social-links li a[href*="vine.co"]::before {
+  content: '\f1ca';
+}
+
+.social-links li a[href*="yelp.com"]::before {
+  content: '\f1e9';
+}
+
+.social-links li a[href*="youtube.com"]::before {
+  content: '\f167';
+}
+
+.social-links li a[href*="wordpress.com"]::before {
+  content: '\f19a';
+}
+

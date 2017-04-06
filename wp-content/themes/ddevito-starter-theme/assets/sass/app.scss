@@ -1,0 +1,144 @@
+// Foundation override file
+@import "settings";
+@import "motion-ui-settings";
+//@import "mdl_settings";
+
+// Import Foundation
+@import "../../node_modules/foundation-sites/scss/foundation";
+
+
+// Select the components you want to use
+@include foundation-global-styles;
+@include foundation-grid; // float-based grid
+// Flexbox
+// If you want to run a flexbox-powered grid system, uncomment @include
+// foundation-flex-grid mixin and comment out the foundation-grid mixin.
+//
+//@include foundation-flex-grid;
+@include foundation-typography;
+@include foundation-button;
+@include foundation-forms;
+@include foundation-visibility-classes;
+@include foundation-float-classes;
+//@include foundation-accordion;
+@include foundation-accordion-menu;
+//@include foundation-badge;
+@include foundation-breadcrumbs;
+//@include foundation-button-group;
+//@include foundation-callout;
+@include foundation-close-button;
+//@include foundation-drilldown-menu;
+@include foundation-dropdown;
+@include foundation-dropdown-menu;
+//@include foundation-flex-video;
+//@include foundation-label;
+//@include foundation-media-object;
+@include foundation-menu;
+@include foundation-menu-icon;
+@include foundation-off-canvas;
+//@include foundation-orbit;
+@include foundation-pagination;
+//@include foundation-progress-bar;
+//@include foundation-slider;
+//@include foundation-sticky;
+@include foundation-reveal;
+//@include foundation-switch;
+@include foundation-table;
+//@include foundation-tabs;
+//@include foundation-thumbnail;
+@include foundation-title-bar;
+//@include foundation-tooltip;
+@include foundation-top-bar;
+//@include foundation-flex-classes;
+
+
+/* ==
+---- 		Include Motion UI
+========================================== */
+
+/* Import Motion UI Settings to override the defaults. */
+@import '../../node_modules/motion-ui/src/util/animation';
+@import '../../node_modules/motion-ui/src/util/args';
+@import '../../node_modules/motion-ui/src/util/keyframe';
+@import '../../node_modules/motion-ui/src/util/selector';
+@import '../../node_modules/motion-ui/src/util/series';
+@import '../../node_modules/motion-ui/src/util/transition';
+@import '../../node_modules/motion-ui/src/util/unit';
+
+@import '../../node_modules/motion-ui/src/effects/fade';
+@import '../../node_modules/motion-ui/src/effects/hinge';
+@import '../../node_modules/motion-ui/src/effects/spin';
+@import '../../node_modules/motion-ui/src/effects/zoom';
+@import '../../node_modules/motion-ui/src/effects/shake';
+@import '../../node_modules/motion-ui/src/effects/slide';
+@import '../../node_modules/motion-ui/src/effects/wiggle';
+
+@import '../../node_modules/motion-ui/src/transitions/fade';
+@import '../../node_modules/motion-ui/src/transitions/hinge';
+@import '../../node_modules/motion-ui/src/transitions/zoom';
+@import '../../node_modules/motion-ui/src/transitions/slide';
+@import '../../node_modules/motion-ui/src/transitions/spin';
+
+@import '../../node_modules/motion-ui/src/classes';
+@include motion-ui-transitions;
+@include motion-ui-animations;
+
+/* ==
+---- 		Include Material Design Lite
+========================================== */
+
+//@import "../../node_modules/material-design-lite/src/material-design-lite";
+
+/* Material Design Lite */
+
+// Variables and mixins
+//@import "../../node_modules/material-design-lite/src/variables";
+//@import "../../node_modules/material-design-lite/src/mixins";
+
+// Resets and dependencies
+//@import "../../node_modules/material-design-lite/src/resets/resets";
+//@import "../../node_modules/material-design-lite/src/typography/typography";
+
+// Components
+//@import "../../node_modules/material-design-lite/src/palette/palette";
+//@import "../../node_modules/material-design-lite/src/ripple/ripple";
+//@import "../../node_modules/material-design-lite/src/animation/animation";
+//@import "../../node_modules/material-design-lite/src/badge/badge";
+//@import "../../node_modules/material-design-lite/src/button/button";
+//@import "../../node_modules/material-design-lite/src/card/card";
+//@import "../../node_modules/material-design-lite/src/checkbox/checkbox";
+//@import "../../node_modules/material-design-lite/src/data-table/data-table";
+//@import "../../node_modules/material-design-lite/src/dialog/dialog";
+//@import "../../node_modules/material-design-lite/src/footer/mega_footer";
+//@import "../../node_modules/material-design-lite/src/footer/mini_footer";
+//@import "../../node_modules/material-design-lite/src/icon-toggle/icon-toggle";
+//@import "../../node_modules/material-design-lite/src/list/list";
+//@import "../../node_modules/material-design-lite/src/menu/menu";
+//@import "../../node_modules/material-design-lite/src/progress/progress";
+//@import "../../node_modules/material-design-lite/src/layout/layout";
+//@import "../../node_modules/material-design-lite/src/radio/radio";
+//@import "../../node_modules/material-design-lite/src/slider/slider";
+//@import "../../node_modules/material-design-lite/src/snackbar/snackbar";
+//@import "../../node_modules/material-design-lite/src/spinner/spinner";
+//@import "../../node_modules/material-design-lite/src/switch/switch";
+//@import "../../node_modules/material-design-lite/src/tabs/tabs";
+//@import "../../node_modules/material-design-lite/src/textfield/textfield";
+//@import "../../node_modules/material-design-lite/src/tooltip/tooltip";
+//@import "../../node_modules/material-design-lite/src/shadow/shadow";
+//@import "../../node_modules/material-design-lite/src/grid/grid";
+
+
+// Our most basic level file type (variables, typography, etc)
+@import "base/base";
+@import "mixins/mixins";
+
+@import "modules/modules";
+
+// Large parts of our site that make up components (header, footer, etc)
+@import "sections/sections";
+
+// Our largest file types that encompass overall individual page styles
+@import "pages/pages";
+
+// Quick fix sass file to be used temporarily and moved onto its proper location when time permits
+@import "shame";

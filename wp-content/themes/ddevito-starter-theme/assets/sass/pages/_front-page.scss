@@ -1,0 +1,214 @@
+.frontpage-content-wrap{
+  @include grid-row();
+  .frontpage-content-inner{
+    @include grid-column(12);
+    background: #fff;
+    .banner-wrap{
+      @include grid-row();
+      .banner-wrap-inner{
+        @include grid-column(12);
+        padding-top: 0.5rem;
+        h1{
+          color: $dark-blue;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+  @include breakpoint(large){
+    margin-top: 2rem;
+  }
+}
+
+//Title bars
+.frontPageTitleBar__wrap{
+  @include grid-row();
+  .frontPageTitleBar__inner{
+    @include grid-column(12);
+    margin-bottom: 1rem;
+    #news{
+      background: $green;
+      .text-inner{
+        color: $green;
+      }
+    }
+    #papers{
+      background: $orange;
+      .text-inner{
+        color: $orange;
+      }
+    }
+    #articles{
+      background: $yellow;
+      .text-inner{
+        color: $yellow;
+      }
+    }
+    .bar{
+      width: 100%;
+      overflow: hidden;
+    }
+    .text-wrapper{
+      display:inline-block;
+      background: $dark-blue;
+      padding-left: 10px;
+      padding-right: 10px;
+      transform: skewX(-25deg);
+      margin-left: -10px;
+      font-weight: 600;
+    }
+    .text-inner{
+      text-transform: uppercase;
+      font-size: 1rem;
+      line-height: 1rem;
+      padding: 5px;
+      transform: skewX(25deg);
+      width: 125px;
+      padding-left: 20px;
+    }
+  }
+}
+
+.featuredMain__wrap{
+  @include grid-row();
+  .featuredMain__inner{
+    @include grid-column(12);
+    .featured-item.item-1 .imgWrap img{
+      width: 100%;
+      height: 100%;
+      z-index: -2;
+    }
+    .featured-item{
+      position: relative;
+      margin-bottom: 2rem;
+      .title, .colour-bar{
+        z-index: 1;
+      }
+      .darken-overlay{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+      }
+      h3{
+        text-transform: uppercase;
+        font-weight: 500;
+        font-family: $headerFontFamily;
+        font-size: 1.3rem;
+      }
+      h3,p{
+        margin-bottom: 0;
+      }
+      .title{
+        height: 105px;
+        padding: 10px;
+      }
+      .colour-bar{
+        height: 20px;
+      }
+      p{color: $white;font-family: $bodyFontFamily;}
+      .imgWrap{
+        height:240px;
+      }
+    }
+    @include breakpoint(medium){
+      .featured-item{
+        width: 45%;
+        margin-left: 2.5%;
+        margin-right: 2.5%;
+        float: left;
+      }
+    }
+    @include breakpoint(large){
+      .featured-item{
+        width: 25%;
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
+    .featured-item:nth-of-type(1){
+      h3{
+        color: $white;
+      }
+      .colour-bar {
+        background: $white;
+      }
+      .title{
+        background: $dark-blue;
+      }
+    }
+    .featured-item:nth-of-type(2){
+      .title{
+        background: rgba(0,0,0,0.3);
+
+      }
+      h3{
+        color: #91c449;
+      }
+      .colour-bar{
+        background: #91c449;
+      }
+    }
+    .featured-item:nth-of-type(3){
+      .title{
+        background: rgba(0,0,0,0.4);
+
+      }
+      h3{
+        color: #db492d;
+      }
+      .colour-bar{
+        background: #db492d;
+      }
+    }
+    .featured-item:nth-of-type(4) {
+      .title{
+        background: rgba(0,0,0,0.5);
+
+      }
+      h3{
+        color: #f1af38;
+      }
+      .colour-bar{
+        background: #f1af38;
+      }
+    }
+  }
+}
+
+.featuredItemGeneric{
+  padding-bottom: 1rem;
+  @include grid-column(12);
+  h3{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+  }
+  img{
+    padding-bottom: 12px;
+  }
+
+}
+@include breakpoint(medium){
+  .featuredItemGeneric{
+    @include grid-column(6);
+    &:last-of-type{
+      margin-right: 25%;
+    }
+  }
+}
+@include breakpoint(large){
+  .featuredItemGeneric{
+    @include grid-column(4);
+    &:last-of-type{
+      margin-right: 0;
+    }
+  }
+}
+
+.featuredNews__wrap{
+  .featuredNews__inner{
+    @include grid-row();
+  }
+}

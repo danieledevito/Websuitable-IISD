@@ -1,0 +1,156 @@
+/* ==
+---- 		Dropdown caret styles.
+========================================== */
+
+.dropdown.menu>li.is-dropdown-submenu-parent>a::after {
+  border-color: $primary-color transparent transparent;
+
+}
+
+/* ==
+---- 		Navigation Styles 2
+========================================== */
+
+@media only screen and (min-width: 1024px) {
+
+  .primary-menu {
+
+    /* ==
+    ---- 		Positioning
+    ========================================== */
+
+    // Move sub-sub menus to the left to keep them from creeping off the page.
+    .dropdown.menu > .menu-item > .submenu .submenu.first-sub {
+      right: 200px;
+      left: auto;
+      top: 0;
+    }
+
+    // Make sure the last menu item submenu doesn't creep off the page.
+    > .dropdown.menu > .menu-item:last-of-type > .submenu {
+      // Move last submenu to the left so it doesn't creep off the page.
+      left: auto !important;
+      right: 0 !important;
+
+      .submenu {
+        right: 200px !important;
+      }
+
+      @media screen and (max-width: 1350px) {
+
+        &.is-dropdown-submenu:after,
+        &.is-dropdown-submenu:before {
+          left: 90%;
+
+        }
+      }
+    }
+
+    /* ==
+    ---- 		General Menu styles - applicable to all menu item levels.
+    ========================================== */
+
+    /* General Styles for all menu levels */
+    > .dropdown.menu > .menu-item a {
+      border-bottom: 1px solid transparent;
+      color: #333;
+      font-size: 1rem;
+      text-transform: uppercase;
+      transition-duration: 300ms;
+    }
+
+    /* Top Level Menu Styles */
+    > .dropdown.menu > .menu-item > a {
+
+      //text-shadow: 1px 1px 1px #ddd;
+
+      &:hover,
+      &focus {
+        border-bottom: 1px solid #fff;
+      }
+    }
+
+    > .dropdown.menu > .menu-item.active a {
+      background: transparent;
+      border-bottom: 1px solid #fff;
+    }
+
+    // Hide the bottom border when there's a dropdown menu.
+    // The border looks weird with the dropdown there.
+    > .dropdown.menu > .menu-item.has-dropdown a {
+      &:hover,
+      &:focus {
+        border-bottom: 1px solid transparent;
+      }
+    }
+
+    /* Submenu Menu Styles */
+    .submenu {
+      border-radius: 4px;
+      background: #fff;
+      border: 1px solid #ddd;
+    }
+
+    > .dropdown.menu > .menu-item > .submenu:after,
+    > .dropdown.menu > .menu-item > .submenu:before {
+      bottom: 100%;
+      left: 20%;
+      border: solid transparent;
+      content: " ";
+      height: 0;
+      width: 0;
+      position: absolute;
+      pointer-events: none;
+    }
+
+    /* Move the triangle tab to the right side for the last menu item */
+    > .dropdown.menu > .menu-item:last-of-type > .submenu:before,
+    > .dropdown.menu > .menu-item:last-of-type > .submenu:after {
+      left: 80%;
+    }
+
+    > .dropdown.menu > .menu-item > .submenu:after {
+      border-color: rgba(136, 183, 213, 0);
+      border-bottom-color: #fff;
+      border-width: 12px;
+      margin-left: -15px;
+    }
+
+    > .dropdown.menu > .menu-item > .submenu:before {
+      border-color: rgba(194, 225, 245, 0);
+      border-bottom-color: #ddd;
+      border-width: 14px;
+      margin-left: -17px;
+    }
+
+    > .dropdown.menu > .menu-item > .submenu > .menu-item {
+      //border: 1px solid transparent;
+
+      > a {
+        color: #444;
+        border-bottom: 1px solid #ddd;
+        text-shadow: none;
+        padding: 0.89rem 2.5rem;
+
+        &:hover,
+        &:focus {
+          -webkit-box-shadow: inset 0px -2px 2px 0px rgba(180,180,180,0.3);
+          -moz-box-shadow: inset 0px -2px 2px 0px rgba(180,180,180,0.3);
+          box-shadow: inset 0px -2px 2px 0px rgba(180,180,180,0.3);
+        }
+      } // end a
+
+      &:last-of-type {
+        a{
+          border-bottom: 0;
+
+        }
+      }
+    }
+
+
+
+  }
+  /* End Primary Menu Styles */
+
+}

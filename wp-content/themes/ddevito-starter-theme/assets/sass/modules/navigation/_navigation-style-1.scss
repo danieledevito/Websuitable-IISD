@@ -1,0 +1,121 @@
+/* ==
+---- 		Dropdown caret styles.
+========================================== */
+
+.dropdown.menu>li.is-dropdown-submenu-parent>a::after {
+  border-color: #222 transparent transparent;
+
+}
+
+/* ==
+---- 		Navigation Styles 1
+========================================== */
+
+@media only screen and (min-width: 1024px) {
+
+  .primary-menu {
+
+    // Positioning
+    // Move sub-sub menus to the left to keep them from creeping off the page.
+    .dropdown.menu > .menu-item > .submenu .submenu.first-sub {
+      right: 200px;
+      left: auto;
+      top: 0;
+    }
+
+    // Make sure the last menu item submenu doesn't creep off the page.
+    > .dropdown.menu > .menu-item:last-of-type > .submenu {
+      left: auto !important;
+      right: 0 !important;
+    }
+
+    /* Top Level Menu Styles */
+    a {
+      border-bottom: 1px solid transparent;
+      color: #222;
+      font-size: 1rem;
+      text-transform: uppercase;
+      transition-duration: 300ms;
+
+      &:hover,
+      &focus {
+        border-bottom: 1px solid $green;
+
+      }
+
+    }
+
+    .active a {
+      border-bottom: 1px solid $green;
+    }
+
+    /* Dropdown Menu Styles */
+
+    .dropdown.menu .submenu {
+      border: 0;
+      //border-left: 1px solid $blue;
+    }
+
+    .is-dropdown-submenu {
+      background: transparent;
+    }
+
+    .is-dropdown-submenu-item {
+      //border: 1px solid transparent;
+
+      a {
+        color: #fff;
+        background: rgb( 0, 0, 0 );
+        background: rgba( 0, 0, 0, 0.7 );
+        border: 1px solid transparent;
+
+        &:hover,
+        &:focus {
+          background: rgb( 0, 0, 0 );
+          background: rgba( 0, 0, 0, 1 );
+          border: 1px solid $green;
+        }
+      }
+    }
+
+
+  } /* End Primary Menu Styles */
+
+  .top-bar-section li:not(.has-form) a:not(.button) {
+    border-bottom: 1px solid transparent;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    letter-spacing: 2px;
+    transition: border-color 500ms ease-in-out;
+
+    &:hover,
+    &:focus {
+      border-color: $primary-color;
+
+    }
+
+  }
+
+  .top-bar-section .dropdown li:not(.has-form).active > a:not(.button) {
+    background: $primary-color;
+  }
+
+  /* ==
+  ---- 		Styles of the Navigation on home only.
+  ========================================== */
+
+  //.home {
+  //  .dropdown.menu .is-dropdown-submenu-parent.is-down-arrow > a::after {
+  //    border-color: #fff transparent transparent;
+  //  }
+  //  .primary-menu {
+  //
+  //    a {
+  //      color: #fff;
+  //    }
+  //
+  //  }
+  //}
+
+
+} /* End Media Query */

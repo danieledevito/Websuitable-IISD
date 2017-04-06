@@ -1,0 +1,70 @@
+/* ==
+---- 		Off Canvas
+========================================== */
+
+.off-canvas-content {
+  box-shadow: none;
+  border-left:1px solid #887e7e;
+}
+
+.ofc-home {
+  font-size: 1.5rem;
+}
+
+.off-canvas {
+  background: $dark-blue;
+  color: #fff;
+  padding: 10px;
+
+  button {
+    span {
+      color: #fff;
+    }
+  }
+
+  label {
+    color: #fff;
+    background: #333;
+    padding: 0.5rem 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+  }
+
+  a {
+    color: #fff;
+    display: inline-block;
+    padding: 0.5rem 0 0.5rem 1rem;
+    text-transform: capitalize;
+    width: 100%;
+  }
+
+}
+
+.off-canvas-navigation {
+
+  .current_page_item,
+  .current-menu-item {
+    > a {
+      background: $primary-color;
+    }
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .off-canvas-navigation__items {
+    > li {
+      border-bottom: 1px solid #ddd;
+    }
+  }
+
+  ul.sub-menu {
+    li a {
+      padding-left: 2rem;
+
+    }
+  }
+}

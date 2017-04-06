@@ -1,0 +1,15 @@
+.entry-content:before,
+.entry-content:after,
+.container:before,
+.container:after,
+.home-section:before,
+.home-section:after {
+  content: " ";
+  display: table;
+}
+
+.entry-content:after,
+.container:after,
+.home-section:after {
+  clear: both;
+}

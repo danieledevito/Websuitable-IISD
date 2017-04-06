@@ -1,0 +1,108 @@
+.site-header {
+
+  .siteSubHeader{
+    .siteSubHeaderInner{
+      @include grid-row();
+    }
+    background: $light-blue;
+    .search-bar-wrap{
+      text-align: center;
+      form{
+        position: relative;
+        display: inline-block;
+        input[type='search']{
+          height: 32px;
+          width: 250px;
+          margin-top: 10px;
+          margin-bottom: 10px;
+        }
+        button{
+          position: absolute;
+          top: 17.5px;
+          right: 6px;
+          color: $primary-color;
+          cursor: pointer;
+        }
+      }
+
+    }
+  }
+  .site-header__inner {
+    background: $dark-blue;
+    .siteHeaderInnerWrap{
+      @include grid-row();
+      .headerText h1{
+        display: none;
+      }
+    }
+    padding: ($space /4) 0;
+  }
+
+  .logo {
+    text-align: center;
+  }
+  .headerText{
+    h1, h6{color: $white;margin-bottom: 0;text-align: center}
+    h6{padding-top: 0;}
+  }
+  .site-title {
+    margin-bottom: 0;
+  }
+
+  /* Modifiers */
+
+  /* ---------------------------------------------------------- */
+  /* =======================  Media Queries ======================= */
+  /* ---------------------------------------------------------- */
+
+  @include breakpoint(medium) {
+
+
+
+  }
+
+  @include breakpoint(large) {
+    .site-header__inner{
+      .logo {
+        @include grid-column(3);
+        text-align: left;
+      }
+      .headerText {
+        @include grid-column(9);
+        h1{
+          display: block!important;
+        }
+        h1,h6{
+          text-align: right;
+        }
+      }
+    }
+
+    .siteSubHeader{
+      .primaryMenu, .search-bar-wrap{
+        @include grid-column(6);
+      }
+      .search-bar-wrap{
+        text-align: right;
+        input[type='search']{
+          float: right;
+          margin-top: 14px;
+          margin-bottom: 10px;
+        }
+        button{
+          top: 21px;
+        }
+      }
+      .primaryMenu{
+        margin-top: 0.55rem;
+        nav{padding-top: 0;float: left;}
+        li a{
+          color: $white;
+          padding: 0;
+          margin: 0.7rem 1.85rem;
+        }
+      }
+    }
+  }
+
+}
