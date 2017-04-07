@@ -50,18 +50,18 @@ class Plugin {
 		/**
 		 * Create these metaboxes on every page.
 		 */
-		$common_config = (new ArrayConfig( TBSC_META_CONFIG_DIR . 'posts/common.php' ))->load_config();
-		$common_custom_post_meta = new CustomPostMeta( $common_config );
-		add_action( 'add_meta_boxes', array( $common_custom_post_meta, 'init_metaboxes' ) );
-		add_action( 'save_post', array( $common_custom_post_meta, 'save_custom_post_meta' ) );
+//		$common_config = (new ArrayConfig( TBSC_META_CONFIG_DIR . 'posts/common.php' ))->load_config();
+//		$common_custom_post_meta = new CustomPostMeta( $common_config );
+//		add_action( 'add_meta_boxes', array( $common_custom_post_meta, 'init_metaboxes' ) );
+//		add_action( 'save_post', array( $common_custom_post_meta, 'save_custom_post_meta' ) );
 
 		/**
 		 * Options for Posts Only.
 		 */
-		$posts_config = (new ArrayConfig( TBSC_META_CONFIG_DIR . 'posts/posts.php' ))->load_config();
-		$single_posts_custom_meta = new CustomPostMeta( $posts_config );
-		add_action( 'add_meta_boxes', array( $single_posts_custom_meta, 'init_metaboxes' ) );
-		add_action( 'save_post', array( $single_posts_custom_meta, 'save_custom_post_meta' ) );
+//		$posts_config = (new ArrayConfig( TBSC_META_CONFIG_DIR . 'posts/posts.php' ))->load_config();
+//		$single_posts_custom_meta = new CustomPostMeta( $posts_config );
+//		add_action( 'add_meta_boxes', array( $single_posts_custom_meta, 'init_metaboxes' ) );
+//		add_action( 'save_post', array( $single_posts_custom_meta, 'save_custom_post_meta' ) );
 
 		/**
 		 * ====================
