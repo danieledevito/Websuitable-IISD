@@ -27,6 +27,7 @@ function styles() {
 		get_stylesheet_directory_uri() . '/assets/dist/css/app.css' . '?' . filemtime( get_stylesheet_directory() . '/assets/dist/css/app.css' )
 	);
 
+	wp_enqueue_style('fonts', get_stylesheet_directory_uri() . '/assets/dist/css/fonts.css' . '?' . filemtime( get_stylesheet_directory() . '/assets/dist/css/fonts.css' ));
 }
 
 

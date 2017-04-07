@@ -11,8 +11,8 @@
 
 <header class="page-header container">
 	<?php
-	the_archive_title( '<h1 class="page-header__heading">', '</h1>' );
-	the_archive_description( '<div class="page-header__sub_heading taxonomy-description">', '</div>' );
+	the_archive_title( '<h1 class="postCatTitle">', '</h1>' );
+	the_archive_description( '<h2 class="postCatDesc">', '</h2>' );
 	?>
 </header>
 

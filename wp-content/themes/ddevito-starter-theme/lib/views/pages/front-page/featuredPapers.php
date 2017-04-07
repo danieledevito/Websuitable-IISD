@@ -25,7 +25,7 @@ $posts_array = get_posts(
         <div class="bar" id="papers">
             <div class="text-wrapper">
                 <div class="text-inner">
-                    Pappers
+                    Papers
                 </div>
             </div>
         </div>

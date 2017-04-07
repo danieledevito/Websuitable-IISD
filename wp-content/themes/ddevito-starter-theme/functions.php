@@ -182,3 +182,45 @@ add_action('admin_enqueue_scripts',  __NAMESPACE__ . '\\admin_style');
 function admin_style(){
 	wp_enqueue_style('admin-styles', get_template_directory_uri() . '/assets/dist/css/admin_featured_items.css');
 }
+
+
+add_filter( 'get_the_archive_title', function ($title) {
+
+	if ( is_category() ) {
+
+		$title = single_cat_title( '', false );
+
+	} elseif ( is_tag() ) {
+
+		$title = single_tag_title( '', false );
+
+	} elseif ( is_author() ) {
+
+		$title = '<span class="vcard">' . get_the_author() . '</span>' ;
+
+	}
+
+	return $title;
+
+});
+add_action ( 'edit_category_form_fields', __NAMESPACE__ . '\\addTitleFieldToCat');
+function addTitleFieldToCat(){
+	$cat_title = get_term_meta($_POST['tag_ID'], '_pagetitle', true);
+	?>
+	<tr class="form-field">
+		<th scope="row" valign="top"><label for="cat_page_title"><?php _e('Category Page Sub-Title'); ?></label></th>
+		<td>
+			<input type="text" name="cat_title" id="cat_title" value="<?php echo $cat_title ?>"><br />
+			<span class="description"><?php _e('Sub-Title for the Category '); ?></span>
+		</td>
+	</tr>
+	<?php
+
+}
+
+add_action ( 'edited_category', __NAMESPACE__ . '\\saveCategoryFields');
+function saveCategoryFields() {
+	if ( isset( $_POST['cat_title'] ) ) {
+		update_term_meta($_POST['tag_ID'], '_pagetitle', $_POST['cat_title']);
+	}
+}

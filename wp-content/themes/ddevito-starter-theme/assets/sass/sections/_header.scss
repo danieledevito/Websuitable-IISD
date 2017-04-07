@@ -33,6 +33,7 @@
       @include grid-row();
       .headerText h1{
         display: none;
+
       }
     }
     padding: ($space /4) 0;
@@ -40,6 +41,7 @@
 
   .logo {
     text-align: center;
+    max-width: 200px;
   }
   .headerText{
     h1, h6{color: $white;margin-bottom: 0;text-align: center}
@@ -70,7 +72,7 @@
       .headerText {
         @include grid-column(9);
         h1{
-          display: block!important;
+          display: block!important;margin-bottom: -10px;
         }
         h1,h6{
           text-align: right;
@@ -98,11 +100,22 @@
         nav{padding-top: 0;float: left;}
         li a{
           color: $white;
-          padding: 0;
-          margin: 0.7rem 1.85rem;
+          padding: 0.7rem 1.85rem;
+          font-weight: 600;
+          &:hover{
+            background: #a5def4;
+            color: $secondary-color;
+          }
         }
       }
     }
   }
 
+}
+.menu .active>a{
+  background: none;
+}
+.primaryMenu .menu .active>a{
+  background: #a5def4;
+  color: $secondary-color!important;
 }

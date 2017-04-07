@@ -9,10 +9,10 @@
  * @license   GPL-2.0+
  */
 
-the_widget(
-	'WP_Widget_Categories',
-	array(
-		'title' => 'Filter By:',
-		'dropdown' => '1',
-	)
-);
+//the_widget(
+//	'WP_Widget_Categories',
+//	array(
+//		'title' => 'Filter By:',
+//		'dropdown' => '1',
+//	)
+//);

@@ -29,20 +29,19 @@
     /* Elements */
 
     .menu-item {
-
+      margin-left: 5px;
+      margin-right: 5px;
+      display: inline-block;
+      transition: ease 0.3s;
       a {
         //border-radius: 4px;
         //margin-right: 5px;
         //background: $primary-color;
-        border-bottom: 1px solid transparent;
+
         color: $primary-color;
         transition-duration: 400ms;
 
-        &:hover,
-        &:focus {
-          //background: scale_color($primary-color, $lightness: -50%);
-          border-bottom: 1px solid $primary-color;
-        }
+
       }
 
       > a {
@@ -54,21 +53,6 @@
       }
     }
 
-    .menu .active > a {
-      //background: none;
-      border-bottom: 1px solid $primary-color;
-    }
-
-    /*
-      Hide the bottom border when there's a dropdown menu.
-      The border looks weird with the dropdown there.
-    */
-    .primary-menu > .dropdown.menu > .menu-item.has-dropdown a {
-      &:hover,
-      &:focus {
-        border-bottom: 1px solid transparent;
-      }
-    }
 
     .is-dropdown-submenu {
       background: transparentize($secondary-color, 0.2);
