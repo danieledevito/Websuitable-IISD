@@ -8,14 +8,14 @@
     border-bottom: 2px solid $dark-blue;
     padding-top: 1rem;
     padding-bottom: 1rem;
-    ul{
+    ul {
       text-align: center;
-      li{
+      li {
         display: block;
-        a{
+        a {
           text-transform: uppercase;
           color: #000;
-          &:hover{
+          &:hover {
             color: #000;
           }
         }
@@ -24,37 +24,59 @@
   }
   @include breakpoint(medium) {
     .sub-footer__inner {
-      ul li{
+      ul li {
         @include grid-column(6);
+        @media (max-width: 1023px) {
+          &:last-of-type{
+            float: left!important;
+          }
+        }
       }
     }
   }
 
   @include breakpoint(large) {
     .sub-footer__inner {
-      ul li{
-        @include grid-column(3);
+      ul li {
+        width: 20%;
       }
     }
   }
 }
 
-.siteFooter{
-
-  .siteFooter__inner{
+.siteFooter {
+  .siteFooter__inner {
     @include grid-row();
-    .projectBy, .participationWith{
-      @include grid-column(12);
-    }
-    .projectBy span{
-      text-transform: uppercase;
-    }
-  }
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 
-  @include breakpoint(large){
-    .projectBy, .participationWith{
-      @include grid-column(6);
+    .projectBy, .participationWith {
+      text-align: center;
+      span, img{
+        display: block;
+      }
+      img{width: 100px; margin-left: auto;margin-right: auto}
+      @include grid-column(12);
+      span {
+        text-transform: uppercase !important;
+        font-weight: 600;
+      }
+    }
+    @include breakpoint(medium) {
+      .projectBy, .participationWith {
+        span, img{
+          display: inline-block;
+        }
+        @include grid-column(6);
+      }
+      .projectBy{
+        text-align: left;
+      }
+      .participationWith {
+        text-align: right;
+      }
     }
   }
 }
+
 /* end .siteFooter module */

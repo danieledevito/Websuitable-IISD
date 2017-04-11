@@ -109,8 +109,7 @@
 
   @include breakpoint(medium) {
     #main {
-      @include grid-column(8);
-      @include grid-column-position(center);
+      @include grid-column(12);
     }
   }
 }
@@ -156,8 +155,9 @@
 
   @include breakpoint(medium) {
     #main {
-      @include grid-column(8);
-      @include grid-column-position(center);
+      padding: 2rem;
+      background: $white;
+      @include grid-column(12);
     }
   }
 

@@ -81,10 +81,11 @@
     }
 
     .siteSubHeader{
-      .primaryMenu, .search-bar-wrap{
-        @include grid-column(6);
+      .primaryMenu{
+        @include grid-column(7);
       }
       .search-bar-wrap{
+        @include grid-column(5);
         text-align: right;
         input[type='search']{
           float: right;
@@ -118,4 +119,11 @@
 .primaryMenu .menu .active>a{
   background: #a5def4;
   color: $secondary-color!important;
+}
+
+@media (max-width: 1023px) {
+  .logo{
+    margin-right: auto;
+    margin-left: auto;
+  }
 }

@@ -205,8 +205,9 @@ add_filter( 'get_the_archive_title', function ($title) {
 });
 add_action ( 'edit_category_form_fields', __NAMESPACE__ . '\\addTitleFieldToCat');
 function addTitleFieldToCat(){
-	$cat_title = get_term_meta($_POST['tag_ID'], '_pagetitle', true);
+	$cat_title = get_term_meta($_GET['tag_ID'], '_pagetitle', true);
 	?>
+
 	<tr class="form-field">
 		<th scope="row" valign="top"><label for="cat_page_title"><?php _e('Category Page Sub-Title'); ?></label></th>
 		<td>
@@ -223,4 +224,11 @@ function saveCategoryFields() {
 	if ( isset( $_POST['cat_title'] ) ) {
 		update_term_meta($_POST['tag_ID'], '_pagetitle', $_POST['cat_title']);
 	}
+}
+
+add_action( 'admin_init', __NAMESPACE__ . '\\posts_order' );
+
+function posts_order()
+{
+	add_post_type_support( 'post', 'page-attributes' );
 }

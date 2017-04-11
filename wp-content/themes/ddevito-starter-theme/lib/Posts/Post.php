@@ -55,7 +55,7 @@ class Post {
 		);
 
 		// Get the post meta. Always used for custom titles.
-		$this->common_meta = CustomData::get_the_post_meta( '_tbsc_common_custom_post_meta', false )[0];
+		$this->common_meta = CustomData::get_the_post_meta( '_tbsc_single_posts_custom_meta', false )[0];
 	}
 
 	/**
@@ -68,7 +68,11 @@ class Post {
 	 */
 	public function do_the_entry() {
 
-		add_action( 'ezra_entry', array( $this, 'do_page_content' ) );
+		add_action('ezra_after_header', array( $this, 'getContentWrap' ));
+		add_action('ezra_before_loop', array( $this, 'getPostHeader' ));
+		add_action( 'ezra_entry', array( $this, 'getMainContent' ) );
+
+		add_action('ezra_before_footer', array($this, 'closeContentWrap'));
 
 		add_action( 'ezra_after_entry', array( $this, 'do_single_post_navigation' ) );
 
@@ -83,12 +87,31 @@ class Post {
 
 	}
 
+
+	public function getContentWrap() {
+		?>
+		<div class="blogPageWrap">
+		<div class="blogPageWrap__inner">
+		<?php
+	}
+
+	public function closeContentWrap() {
+		?>
+		</div>
+		</div>
+		<?php
+	}
+
+	public function getPostHeader() {
+		include( Views::load_view( TBSC_VIEWS_DIR . 'posts/postHeader.php' ) );
+	}
+
 	/**
 	 * Output entry content.
 	 *
 	 * @since 1.0.0
 	 */
-	public function do_page_content() {
+	public function getMainContent() {
 		include( Views::load_view( TBSC_VIEWS_DIR . 'posts/entry.php' ) );
 	}
 

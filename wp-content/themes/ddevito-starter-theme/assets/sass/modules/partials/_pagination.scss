@@ -7,6 +7,9 @@
   &.row {
     margin: 0;
   }
+  a{
+    color: $dark-blue;
+  }
 }
 
 .paging-navigation {
@@ -15,7 +18,7 @@
     @include pagination_style;
 
     &.current {
-      background: $primary-color;
+      background: $dark-blue;
       color: #fff;
     }
 
@@ -26,7 +29,7 @@
     }
 
     .fa {
-      color: $primary-color;
+      color: $dark-blue;
     }
   }
 }
@@ -41,7 +44,7 @@
 
   .single_post_navigation__heading {
     display: block;
-    color: $primary-color;
+    color: $dark-blue;
   }
 
   .single_post_nagivation__title {

@@ -27,8 +27,6 @@ use TBSC_Core\Support\CustomData;
 	</header>
 
 	<div class="entry-content">
-
-
 		<?php the_content(); ?>
 	</div>
 </article>

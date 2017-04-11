@@ -1,0 +1,215 @@
+.archive.category{
+  main{background: $white;padding:1.5rem!important;}
+  .page-header{
+    background: $white;
+    .postCatTitle{
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: -10px;
+      text-transform: uppercase;
+    }
+    .postCatDesc{
+      font-size: 2.5rem;
+      text-transform: uppercase;
+      color: #000;
+      padding-top: 0;
+      font-weight: 600;
+    }
+    @include breakpoint(medium){
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 1.5rem;
+    }
+    @include breakpoint(large){
+
+    }
+  }
+}
+
+.inner-page-wrap{
+  @include breakpoint(large){
+    margin-top: 3rem;
+  }
+  padding: 0!important;
+}
+.catLandingHeader{
+  .topBar{
+    background: $dark-blue;
+    display: none;
+  }
+  .catColorBar{
+    display: none;
+    height: 15px;
+  }
+  .imageWrap{
+    display: none;
+    height: 300px;
+  }
+  @include breakpoint(medium){
+    margin-bottom: -150px;
+    .imageWrap{
+      display: block;
+      margin-bottom: 1rem;
+    }
+    .topBar{
+      height: 60px;
+      display: block;
+    }
+    .catColorBar{
+      display: block;
+    }
+  }
+  @include breakpoint(large){
+    .imageWrap{
+      height: 600px;
+    }
+    .catColorBar{
+      height: 20px;
+    }
+    .topBar{
+      height: 65px;
+    }
+  }
+}
+
+.landingBodyWrap{
+  @include grid-row();
+  .postWrap{
+    .postEntry{
+      padding: 0.5rem 0;
+     .innerPostWrap{
+       @include grid-row();
+       hr{margin-top: 1rem}
+       h2{
+         text-transform: uppercase;
+         font-weight: bold;
+         margin-bottom: 0;
+       }
+       .read-more-button{
+         background-color: $dark-blue;
+       }
+       .contentWrap p{
+         color: $black;
+         overflow: hidden;
+         display: -webkit-box;
+         -webkit-line-clamp: 4;
+         -webkit-box-orient: vertical;
+         text-overflow: ellipsis;
+       }
+       .forDesktop{
+        display: none;
+         .thumbWrap{
+           height: 200px;
+           margin-bottom: 1rem;
+           -webkit-background-size: cover!important;
+           background-size: cover!important;
+         }
+       }
+       @include breakpoint(medium){
+         .forMobile{
+           display: none;
+         }
+         .forDesktop{
+           display: block;
+         }
+       }
+       @include breakpoint(large){
+
+       }
+     }
+    }
+  }
+  .catPageSideBar{
+    h3{
+      text-transform: uppercase;
+      font-size: 1.5rem;
+      font-weight: 600;
+
+    }
+    .catPageSideBar__inner{
+      background: $light-gray;
+      padding: 1rem;
+      .featuredPostWrap{
+        padding: 0.5rem 0;
+      }
+      .featuredPostThumb{
+        height: 80px;
+        -webkit-background-size: cover!important;
+        background-size: cover!important;
+      }
+      .featuredPostContent{
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        padding-right: 0;
+        h4{
+          margin-bottom: 0;
+          font-size: 1.2rem;
+          font-weight: bold;
+        }
+        p{
+          color: $black;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  @include breakpoint(medium){
+    width: 90%;
+  }
+  @include breakpoint(large){
+    .postWrap{
+      @include grid-column(7);
+    }
+    .sideBarWrap{
+      @include grid-column(5);
+    }
+  }
+}
+
+
+//Cat specific
+.category-news{
+  .imageWrap{
+    background: url("/images/news.jpg") no-repeat center center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-attachment: fixed!important;
+  }
+  .catColorBar{
+    background: $green;
+  }
+   .postCatTitle, .catPageSideBar h3{
+     color: $green;
+   }
+ }
+.category-papers{
+  .imageWrap{
+    background: url("/images/papers.jpg") no-repeat center center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-attachment: fixed!important;
+  }
+  .catColorBar{
+    background: $orange;
+  }
+  .postCatTitle, .catPageSideBar h3{
+    color: $orange;
+  }
+}
+.category-articals{
+  .imageWrap{
+    background: url("/images/artical.jpg") no-repeat center center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-attachment: fixed!important;
+  }
+  .catColorBar{
+    background: $yellow;
+  }
+  .postCatTitle, .catPageSideBar h3{
+    color: $yellow;
+  }
+}

@@ -44,37 +44,36 @@ return array(
 				'priority'     => 'high',
 				'fields'       => array(
 					array(
-						'title'                 => 'Custom Page Title',
-						'id'                    => '[custom_title]',
-						'label'                 => 'custom_title',
-						'desc'                  => 'Set a custom title to show on the front view of this page.',
+						'title'                 => 'Issues',
+						'id'                    => '[post_issues]',
+						'label'                 => 'post_issues',
+						'desc'                  => '',
 						'type'                  => 'text_large',
 						// Key must be unique to the particular field
-						'key'                   => 'custom_title',
+						'key'                   => 'post_issues',
 						'sanitization_callback' => 'sanitize_text_field',
 					),
 
 					array(
-						'title'                 => 'Custom Sidebar Content',
-						'id'                    => '[custom_sidebar_content]',
-						'label'                 => 'custom_sidebar_content',
-						'desc'                  => 'This content will appear before any other sidebar content and will be unique to this page.',
+						'title'                 => 'Actors',
+						'id'                    => '[post_actors]',
+						'label'                 => 'post_actors',
+						'desc'                  => '',
 						'type'                  => 'editor',
 						// Key must be unique to the particular field
-						'key'                   => 'custom_sidebar_content',
-						'sanitization_callback' => 'wp_kses_post',
-						'args'                  => array(
-//							'initial_content'  => 'initial content here',
-							'settings' => array(
-								'textarea_rows' => 10, // Default 10
-								'wpautop'       => true, // Default true
-								'media_buttons' => true, // Default true
-								'tinymce'       => false,
-
-							),
-						),
+						'key'                   => 'text_large',
+						'sanitization_callback' => 'sanitize_text_field',
 					),
-
+					array(
+						'title'                 => 'Regions',
+						'id'                    => '[post_regions]',
+						'label'                 => 'post_regions',
+						'desc'                  => '',
+						'type'                  => 'editor',
+						// Key must be unique to the particular field
+						'key'                   => 'text_large',
+						'sanitization_callback' => 'sanitize_text_field',
+					)
 				),
 				/* end fields */
 			), /* end common_for_all_screens_1 */

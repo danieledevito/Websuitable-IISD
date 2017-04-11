@@ -103,46 +103,45 @@ class Archive {
 	 */
 	public function do_the_entry() {
 
+
 		add_action( 'ezra_before_loop', array( $this, 'do_page_header' ) );
-		add_action( 'ezra_before_loop', array( $this, 'do_category_dropdown' ) );
-
-		add_action( 'ezra_entry', array( $this, 'do_page_content' ) );
-
 		// Load pagination from the pagination object found in tbsc-core plugin.
+		add_action( 'ezra_before_loop', array( $this, 'wrapEntry' ) );
+		add_action( 'ezra_entry', array( $this, 'do_page_content' ) );
 		add_action( 'ezra_after_loop', array( $this->pagination, 'do_pagination' ) );
+		add_action( 'ezra_after_loop', array( $this, 'endWrap' ) );
+//		add_action( 'ezra_before_footer', array( $this, 'endPageWrap' ) );
 
 	}
 
-	/**
-	 * Do custom page header for archive pages.
-	 *
-	 * @since 2.0.0
-	 */
+	public function wrapEntry() {
+		?>
+		<div class="landingBodyWrap">
+			<div class="postWrap">
+		<?php
+	}
+
+	public function endWrap() {
+		?>
+			</div>
+			<div class="sideBarWrap">
+				<?php include( Views::load_view( TBSC_VIEWS_DIR . 'postcatlanding/sidebar.php' ) ); ?>
+			</div>
+		</div>
+		<?php
+	}
+
+	public function do_page_content() {
+		include( Views::load_view( TBSC_VIEWS_DIR . 'archive/entry.php' ) );
+	}
+
 	public function do_page_header() {
 		include( Views::load_view( TBSC_VIEWS_DIR . 'archive/archive-page-header.php' ) );
 
 	}
 
-	/**
-	 * Output entry header.
-	 *
-	 * This entry header wraps post titles in h2 tags
-	 * and adds a rel="bookmark" attribute to the link.
-	 * Used by HomePostsPage and SearchPage classes.
-	 *
-	 * @since 2.0.0
-	 */
-	public function do_page_content() {
-		include( Views::load_view( TBSC_VIEWS_DIR . 'archive/entry.php' ) );
-	}
-
-	/**
-	 * Output the blog category dropdown list.
-	 *
-	 * @since 2.0.0
-	 */
-	public function do_category_dropdown() {
-		include( Views::load_view( TBSC_VIEWS_DIR . 'archive/partials/category-dropdown.php' ) );
-	}
+//	public function do_category_dropdown() {
+//		include( Views::load_view( TBSC_VIEWS_DIR . 'archive/partials/category-dropdown.php' ) );
+//	}
 
 }

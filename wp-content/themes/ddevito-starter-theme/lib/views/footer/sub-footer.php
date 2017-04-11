@@ -15,9 +15,9 @@ use TBSC_Core\Navigation\Foundation_Menu_Walker;
 	<div class="sub-footer__inner">
 <!--			<p>&copy; --><?php //echo date('Y') . ' ' . $this->options['copyright_text']; ?><!--</p>-->
 			<?php
-			if ( has_nav_menu( 'primary' ) ) {
+			if ( has_nav_menu( 'footer' ) ) {
 				wp_nav_menu( array(
-					'theme_location' => 'primary',
+					'theme_location' => 'footer',
 					'container'      => '',
 					'menu_class'     => 'dropdown menu',
 					'before'         => '',

@@ -18,28 +18,54 @@ $single_post_meta = get_post_meta( get_the_ID(), '_tbsc_single_posts_custom_meta
 $post_meta = new PostMeta(
 	new ArrayConfig( TBSC_CONFIG_DIR . 'post-meta/post-meta.php' )
 );
-?>
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> role="article">
-	<header class="entry-header">
-		<h1 class="entry-title"><?php
-			if ( CustomData::available( 'custom_title', $this->common_meta ) ) {
-				echo $this->common_meta['custom_title'];
-			} else {
-				the_title();
-			}
-			?></h1>
-
-		<div class="entry-meta">
-			Published on <?php $post_meta->do_entry_date();?>
-		</div>
-	</header>
-
-	<div class="entry-content">
-		<?php the_content(); ?>
+if(has_post_thumbnail()){
+	?>
+	<div class="featuredImageHeader" style='background: url("<?php echo the_post_thumbnail_url() ?>") no-repeat center center;'>
 	</div>
+	<?php
+}
 
-	<footer class="entry-footer">
+$postCategories = wp_get_post_categories(get_the_ID());
+?>
+<div class="mainPostWrap">
+	<div class="entryWrap">
+		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> role="article">
+			<h4 class="catWrap">
+				<?php
+	//				$countX = 0;
+					foreach($postCategories as $postCat){
+						$countX++;
+						$catDetail = get_the_category_by_ID($postCat);
+						echo '<a href="' . get_category_link($postCat) .  '" class="text' . $catDetail . '">' . $catDetail . '</a> ';
+	//					if($countX != count($postCategories)){
+	//						echo ", ";
+	//					}
+					}
+				?>
+			</h4>
+			<header class="entry-header">
+				<h1 class="entry-title"><?php
+					if ( CustomData::available( 'custom_title', $this->common_meta ) ) {
+						echo $this->common_meta['custom_title'];
+					} else {
+						the_title();
+					}
+					?></h1>
 
-	</footer>
+		<!--		<div class="entry-meta">-->
+		<!--			Published on --><?php //$post_meta->do_entry_date();?>
+		<!--		</div>-->
+			</header>
 
-</article>
+			<div class="entry-content">
+				<?php the_content(); ?>
+			</div>
+
+			<footer class="entry-footer">
+
+			</footer>
+
+		</article>
+	</div>
+	<?php include_once("sidebar.php") ?>
+</div>

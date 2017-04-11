@@ -27,9 +27,7 @@ return array(
 	 */
 	'menu_registration' => array(
 		'primary' => 'Primary Menu',
-		'social'  => 'Social Menu',
 		'footer'  => 'Footer Menu',
-		'category-menu' => 'Cat Menu',
 	),
 
 	'view_path'   => function () {

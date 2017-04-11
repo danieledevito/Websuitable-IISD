@@ -40,9 +40,10 @@ $posts_array = get_posts(
                         </div>
                         <div class="colour-bar"></div>
                         <div class="title">
+                            <h3>SUSTAINABLE<br/>INFRASTRUCTURE<br/>PRIMER</h3>
                             <?php
 
-                            echo '<h3>' . $metaArray['featured_items_story_title'] . '</h3>';
+//                            echo '<h3>' . $metaArray['featured_items_story_title'] . '</h3>';
                             if($metaArray['featured_items_story_subtitle']){
                                 echo $metaArray['featured_items_story_subtitle'];
                             }
