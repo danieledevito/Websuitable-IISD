@@ -19,7 +19,7 @@ namespace TBSC;
 function styles() {
 
 	// Enqueue Google fonts
-	wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Lato:300,400,400i,700|Roboto:300,400,400i,500,700', array(), '1.0.0' );
+	wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Lato:300,400,400i,700|Roboto:300,400,400i,500,700|EB+Garamond', array(), '1.0.0' );
 	// Enqueue Font Awesome
 	wp_enqueue_style( 'MY_THEME-FontAwesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css' );
 

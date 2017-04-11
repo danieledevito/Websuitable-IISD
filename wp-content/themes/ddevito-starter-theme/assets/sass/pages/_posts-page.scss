@@ -43,7 +43,6 @@
 
     .featuredImageHeader{
       background-size: cover!important;
-      background-attachment: fixed!important;
       height: 200px;
       margin: 1rem 0;
       @include breakpoint(medium){
