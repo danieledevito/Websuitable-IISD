@@ -110,6 +110,5 @@ return array(
 				), // End Custom Taxonomy
 			), // End Custom Taxonomy Group
 		), // End Custom Post Type
-
 	), // End All Custom Post Types
 ); // End Config Array
