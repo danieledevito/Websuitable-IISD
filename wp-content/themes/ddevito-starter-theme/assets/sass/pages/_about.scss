@@ -1,0 +1,72 @@
+.about-banner{
+  background-size: cover!important;
+  .about-banner__inner{
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    @include grid-row();
+    h1{@include grid-column(12);font-size: 2.4rem}
+    .hasBg{
+      color: $white;
+    }
+  }
+
+  @include breakpoint(medium){
+    .about-banner__inner{
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+    }
+  }
+
+  @include breakpoint(large){
+    .about-banner__inner{
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+    }
+    @media (min-width: 1200px) {
+      margin-top: 1.5rem;
+    }
+  }
+}
+
+.about-page-content{
+  @include grid-row();
+  .about-page-sidebar{
+    display: none;
+    .about-page-sidebar__inner{
+      background: $light-gray;
+      padding: 1rem 2rem;
+    }
+  }
+  .about-page-content__inner{
+    @include grid-column(12);
+  }
+  @include breakpoint(medium){
+    .about-page-content__inner{
+      @include grid-column(8);
+    }
+    .about-page-sidebar{
+      @include grid-column(4);
+      display: block;
+    }
+  }
+  @include breakpoint(large){
+
+  }
+}
+
+.page-template-about-us{
+
+  .inner-page-wrap{
+    margin-top: 1rem;
+  }
+  main{
+    padding-top: 1rem;
+    background: $white;
+  }
+  @media (max-width: 640px) {
+    main{
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+  }
+}

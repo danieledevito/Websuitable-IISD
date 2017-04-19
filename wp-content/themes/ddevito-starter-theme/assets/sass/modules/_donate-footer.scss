@@ -1,0 +1,52 @@
+.donate-footer{
+  background: url("/images/bg-donate.jpg");
+  background-size: cover;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+  .donate-footer__inner{
+    @include grid-row(); 
+    .donate-footer__content{
+      @include grid-column(12);
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+      h4,p{font-family: "proxima-nova-alt", Arial, Helvetica Neue, Helvetica, sans-serif;}
+      h4{
+        font-size: 2rem;
+        color: $green;
+        span{
+          color: $primary-color;
+        }
+      }
+      p{
+        color: $white;
+        font-size: 1.3rem;
+        margin-bottom: 1.5rem;
+      }
+      a{
+        padding: 10px 30px;
+        color: $white;
+        background: $green;
+        &:hover{
+          background-color: $primary-color;
+        }
+      }
+    }
+    @include breakpoint(medium){
+      //@include grid-column(8);
+      .donate-footer__content{
+        @include grid-column(9);
+
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+      }
+    }
+    @media(min-width: 1440px){
+      .donate-footer__content{
+        @include grid-column(7);
+
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+      }
+    }
+  }
+}
