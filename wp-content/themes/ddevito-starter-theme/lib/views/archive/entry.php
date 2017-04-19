@@ -28,14 +28,31 @@ $post_meta = new PostMeta(
 					<div class="forMobile">
 						<h2><?php the_title() ?></h2>
 <!--						<div class="thumbWrap">--><?php //the_post_thumbnail() ?><!--</div>-->
-						<div class="contentWrap"><?php the_excerpt() ?></div>
+						<div class="contentWrap">
+							<?php
+							if($single_post_meta && $single_post_meta['post_summary']){
+								echo $single_post_meta['post_summary'];
+							}else{
+								the_excerpt();
+							}
+							?>
+						</div>
 						<a href="<?php the_permalink(); ?>" class="read-more-button button radius">Read More</a>
 					</div>
 					<div class="forDesktop">
 						<div class="medium-4 column thumbWrap" style='background: url("<?php echo the_post_thumbnail_url() ?>") no-repeat center center'></div>
 						<div class="medium-8 column">
 							<h2><?php the_title() ?></h2>
-							<div class="contentWrap"><?php the_excerpt() ?></div>
+							<div class="contentWrap">
+								<?php
+								if($single_post_meta && $single_post_meta['post_summary']){
+									echo $single_post_meta['post_summary'];
+								}else{
+									the_excerpt();
+								}
+
+
+								?></div>
 							<a href="<?php the_permalink(); ?>" class="read-more-button button radius">Read More</a>
 						</div>
 					</div>
@@ -44,7 +61,15 @@ $post_meta = new PostMeta(
 				}else{
 					?>
 					<h2><?php the_title() ?></h2>
-					<div class="contentWrap"><?php the_content() ?></div>
+					<div class="contentWrap">
+						<?php
+						if($single_post_meta && $single_post_meta['post_summary']){
+							echo $single_post_meta['post_summary'];
+						}else{
+							the_excerpt();
+						}
+						?>
+					</div>
 					<a href="<?php the_permalink(); ?>" class="read-more-button button radius">Read More</a>
 					<hr/>
 					<?php

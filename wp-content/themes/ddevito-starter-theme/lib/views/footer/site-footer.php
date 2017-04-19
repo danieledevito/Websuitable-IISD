@@ -19,7 +19,7 @@ use TBSC_Core\Support\Views;
 	<div class="siteFooter__inner">
 		<div class="projectBy">
 			<span>A Project By</span>
-			<img src="/images/IISD.png" alt="IISD"/>
+			<img style="margin-left: 3px;" src="/images/IISD.jpg" alt="IISD"/>
 			<span>And</span>
 			<img src="/images/mava.png" alt="Mava"/>
 		</div>
