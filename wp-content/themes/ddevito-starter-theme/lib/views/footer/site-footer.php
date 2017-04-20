@@ -25,7 +25,7 @@ use TBSC_Core\Support\Views;
 		</div>
 		<div class="participationWith">
 			<span>with the participation of</span>
-			<img src="/images/cpcs.png" alt="CPCS"/>
+			<img style="width: 300px;" src="/images/cpcs.png" alt="CPCS"/>
 		</div>
 	</div>
 </section>
