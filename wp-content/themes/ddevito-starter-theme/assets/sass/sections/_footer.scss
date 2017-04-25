@@ -45,6 +45,7 @@
 }
 
 .siteFooter {
+  font-family: Arial;
   .siteFooter__inner {
     @include grid-row();
     padding-top: 1rem;
