@@ -19,13 +19,13 @@ use TBSC_Core\Support\Views;
 	<div class="siteFooter__inner">
 		<div class="projectBy">
 			<span>A Project By</span>
-			<img style="margin-left: 3px;" src="/images/IISD.jpg" alt="IISD"/>
+			<img id="footerIISD" style="margin-left: 3px;" src="/images/IISD.jpg" alt="IISD"/>
 			<span>And</span>
-			<img src="/images/mava.png" alt="Mava"/>
+			<img id="footerMava" src="/images/mava.png" alt="Mava"/>
 		</div>
 		<div class="participationWith">
 			<span>with the participation of</span>
-			<img style="width: 300px;" src="/images/cpcs.png" alt="CPCS"/>
+			<img id="footerCPCS" src="/images/cpcs.png" alt="CPCS"/>
 		</div>
 	</div>
 </section>
