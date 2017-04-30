@@ -7,20 +7,6 @@
  * @copyright 2015 Daniele De Vito
  * @license   GPL-2.0+
  */
-$currentCatId = get_query_var('cat');
-if($currentCatId == 6){
-	//News
-	$featuredPostId = $this->options['id_of_featured_news'];
-}elseif($currentCatId == 7){
-	//Papers
-	$featuredPostId = $this->options['id_of_featured_papers'];
-}elseif($currentCatId == 8){
-	//Papers
-	$featuredPostId = $this->options['id_of_featured_articals'];
-}
-
-$featuredPostMeta = get_post_meta($featuredPostId, '_tbsc_single_posts_custom_meta', true);
-
 
 ?>
 <div class="catLandingHeader">
@@ -30,9 +16,9 @@ $featuredPostMeta = get_post_meta($featuredPostId, '_tbsc_single_posts_custom_me
 	<div class="catColorBar"></div>
 	<div class="imageWrap"
 		<?php
-		if(get_the_post_thumbnail_url($featuredPostId)){
+		if(get_the_post_thumbnail_url($this->featuredPostId)){
 			?>
-			style='background: url("<?php echo get_the_post_thumbnail_url($featuredPostId); ?>") no-repeat center center'
+			style='background: url("<?php echo get_the_post_thumbnail_url($this->featuredPostId); ?>") no-repeat center center'
 			<?php
 		}
 		?>
@@ -41,12 +27,15 @@ $featuredPostMeta = get_post_meta($featuredPostId, '_tbsc_single_posts_custom_me
 <header class="page-header container">
 	<?php
 	the_archive_title( '<h1 class="postCatTitle">', '</h1>' );
-	echo '<h2 class="postCatDesc">' . get_the_title($featuredPostId) . '</h2>';
-	if($featuredPostMeta['post_summary']){
-		echo $featuredPostMeta['post_summary'];
+	echo '<h2 class="postCatDesc">' . get_the_title($this->featuredPostId) . '</h2>';
+	if($this->featuredPostMeta['post_summary']){
+		echo $this->featuredPostMeta['post_summary'];
 	}else{
-		echo get_the_excerpt($featuredPostId);
+		echo get_the_excerpt($this->featuredPostId);
 	}
 	?>
+	<div>
+	<a style="background: #083166" href="<?php get_the_permalink($this->featuredPostId); ?>" class="read-more-button button radius">Read More</a>
+	</div>
 </header>
 

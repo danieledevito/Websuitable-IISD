@@ -18,6 +18,10 @@ $single_post_meta = get_post_meta( get_the_ID(), '_tbsc_single_posts_custom_meta
 $post_meta = new PostMeta(
 	new ArrayConfig( TBSC_CONFIG_DIR . 'post-meta/post-meta.php' )
 );
+
+
+echo $this->featuredPostId . "  " . get_the_ID();
+if(get_the_ID() != $this->featuredPostId){
 ?>
 <article class="postEntry" id="post-<?php the_ID(); ?>" <?php post_class(); ?> role="article">
 <!--	<a href="--><?php //the_permalink() ?><!--">-->
@@ -100,3 +104,4 @@ $post_meta = new PostMeta(
 <!--	</footer>-->
 
 </article>
+<?php } ?>

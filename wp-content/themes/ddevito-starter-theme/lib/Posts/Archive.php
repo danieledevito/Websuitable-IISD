@@ -68,6 +68,9 @@ class Archive {
 	 * @var
 	 */
 	protected $common_meta;
+	protected $currentCatId;
+	protected $featuredPostId;
+	protected $featuredPostMeta;
 
 	/**
 	 * Archive constructor.
@@ -93,6 +96,19 @@ class Archive {
 		);
 		$this->options = CustomData::get_theme_option("iisd_settings");
 		$this->common_meta = CustomData::get_the_post_meta( '_tbsc_common_custom_post_meta', false )[0];
+		$this->currentCatId = get_query_var('cat');
+		if($this->currentCatId == 6){
+			//News
+			$this->featuredPostId = $this->options['id_of_featured_news'];
+		}elseif($this->currentCatId == 7){
+			//Papers
+			$this->featuredPostId = $this->options['id_of_featured_papers'];
+		}elseif($this->currentCatId == 8){
+			//Papers
+			$this->featuredPostId = $this->options['id_of_featured_articals'];
+		}
+
+		$this->featuredPostMeta = get_post_meta($this->featuredPostId, '_tbsc_single_posts_custom_meta', true);
 
 	}
 
