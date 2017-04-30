@@ -19,8 +19,6 @@ $post_meta = new PostMeta(
 	new ArrayConfig( TBSC_CONFIG_DIR . 'post-meta/post-meta.php' )
 );
 
-
-echo $this->featuredPostId . "  " . get_the_ID();
 if(get_the_ID() != $this->featuredPostId){
 ?>
 <article class="postEntry" id="post-<?php the_ID(); ?>" <?php post_class(); ?> role="article">
