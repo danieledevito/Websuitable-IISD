@@ -7,8 +7,6 @@
  * @copyright 2015 Daniele De Vito
  * @license   GPL-2.0+
  */
-var_dump(get_query_var('cat'));
-var_dump($this->options);
 $currentCatId = get_query_var('cat');
 if($currentCatId == 6){
 	//News
