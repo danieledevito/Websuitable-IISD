@@ -91,7 +91,7 @@ class Archive {
 		$this->pagination = new Pagination(
 			new ArrayConfig( TBSC_CONFIG_DIR . 'navigation/paginate-links.php' )
 		);
-
+		$this->options = CustomData::get_theme_option("iisd_settings");
 		$this->common_meta = CustomData::get_the_post_meta( '_tbsc_common_custom_post_meta', false )[0];
 
 	}
