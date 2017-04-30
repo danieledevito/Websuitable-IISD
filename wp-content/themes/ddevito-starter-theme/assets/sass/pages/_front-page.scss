@@ -106,7 +106,7 @@
       .colour-bar{
         height: 20px;
       }
-      p{color: $white;font-family: $bodyFontFamily;}
+      p{color: $white;font-family: $bodyFontFamily;line-height: 20px;margin-top: 3px;}
       .imgWrap{
         height:240px;
       }
@@ -181,15 +181,19 @@
   @include grid-column(12);
   h3{
     //text-align: center;
+    color: #000!important;
     text-transform: uppercase;
     font-size: 1.3rem;
     font-weight: 600;
-    margin-bottom: 0.25rem;
+    margin-bottom: 0.40rem;
   }
   img{
     padding-bottom: 12px;
   }
-
+  p{
+    color: #000!important;
+    line-height: 20px!important;
+  }
 }
 @include breakpoint(medium){
   .featuredItemGeneric{

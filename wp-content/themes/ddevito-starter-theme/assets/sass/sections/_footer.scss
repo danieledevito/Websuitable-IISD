@@ -57,6 +57,12 @@
         display: block;
       }
       img{width: 100px; margin-left: auto;margin-right: auto}
+      #footerIISD{
+        width: 120px;
+      }
+      #footerCPCS{
+        width: 240px;
+      }
       @include grid-column(12);
       span {
         text-transform: uppercase !important;
