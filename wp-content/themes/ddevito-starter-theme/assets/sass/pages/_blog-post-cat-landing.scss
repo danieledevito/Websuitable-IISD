@@ -89,13 +89,18 @@
        .read-more-button{
          background-color: $dark-blue;
        }
-       .contentWrap p{
+       .contentWrap{
          color: $black;
          overflow: hidden;
          display: -webkit-box;
          -webkit-line-clamp: 4;
          -webkit-box-orient: vertical;
          text-overflow: ellipsis;
+         margin-bottom: 1.15rem;
+       }
+       .contentWrap p{
+         overflow: hidden;
+         margin-bottom: 0rem;
        }
        .forDesktop{
         display: none;
@@ -148,6 +153,11 @@
           margin-bottom: 0;
           font-size: 1.2rem;
           font-weight: bold;
+          overflow: hidden;
+          display: -webkit-box;
+          -webkit-line-clamp: 1;
+          -webkit-box-orient: vertical;
+          text-overflow: ellipsis;
         }
         p{
           color: $black;
