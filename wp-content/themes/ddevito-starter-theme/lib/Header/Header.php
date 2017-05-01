@@ -70,7 +70,7 @@ class Header {
 	}
 
 	public function getGreySkew(){
-		?><div id="greySkew"></div><?php
+		?><div id="greySkew"></div><span class="arcWrap"><img src="/images/header_bg.png" alt="IISD"/></span><?php
 	}
 	/**
 	 * Output custom desktop header / nav.
