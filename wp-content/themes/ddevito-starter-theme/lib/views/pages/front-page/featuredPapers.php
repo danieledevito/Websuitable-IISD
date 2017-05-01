@@ -38,7 +38,7 @@ $postArray = get_posts(
                 if(has_post_thumbnail($post->ID)){
                     echo "background: url('" . get_the_post_thumbnail_url($post->ID) . "') no-repeat center center;";
                 }else{
-                    echo "background: url('/images/papers.jpg') no-repeat center3 center;";
+                    echo "background: url('/images/papers.jpg') no-repeat center center;";
                 }
                 ?>"></div>
                 <h3><?php echo $post->post_title ?></h3>
