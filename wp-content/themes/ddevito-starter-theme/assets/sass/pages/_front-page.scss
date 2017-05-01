@@ -95,9 +95,21 @@
         font-weight: 500;
         font-family: $headerFontFamily;
         font-size: 1.3rem;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
       }
       h3,p{
         margin-bottom: 0;
+      }
+      p{
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
       }
       .title{
         height: 105px;
@@ -186,6 +198,11 @@
     font-size: 1.3rem;
     font-weight: 600;
     margin-bottom: 0.40rem;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
   }
   .imageWrap{
     height: 10rem;
@@ -207,6 +224,11 @@
     color: #000!important;
     line-height: 20px!important;
     padding-left: 5px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
   }
 }
 @include breakpoint(medium){
