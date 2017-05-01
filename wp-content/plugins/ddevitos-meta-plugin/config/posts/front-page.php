@@ -60,7 +60,16 @@ return array(
 						'key'                   => 'frontpage_featured_item_pic',
 						'sanitization_callback' => 'sanitize_text_field',
 					),
-
+					array(
+						'title'                 => 'Featured Item Link',
+						'id'                    => '[frontpage_featured_item_link]',
+						'label'                 => 'frontpage_featured_item_link',
+						'desc'                  => '',
+						'type'                  => 'text_large',
+						// Key must be unique to the particular field
+						'key'                   => 'frontpage_featured_item_link',
+						'sanitization_callback' => 'sanitize_text_field',
+					),
 				),
 				/* end fields */
 			), /* end metabox 1 */

@@ -45,7 +45,7 @@ $posts_array = get_posts(
     <div class="featuredMain__inner">
 
         <div class="featured-item item-1">
-            <a href="">
+            <a href="<?php echo $this->front_meta['frontpage_featured_item_link']; ?>">
                 <div class="darken-overlay"></div>
                 <div class="imgWrap">
                     <img src="<?php echo $this->front_meta['frontpage_featured_item_pic']; ?>" alt="<?php echo $this->front_meta['frontpage_featured_item_title']; ?>"/>
