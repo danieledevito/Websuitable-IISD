@@ -5,6 +5,9 @@ jQuery(function ($) {
 
     $(document).ready(function () {
         placeGreySkew();
+
+        $(".featuredItemGeneric a img").attr("width", 640);
+        $(".featuredItemGeneric a img").attr("height", 400);
     });
 
     $(window).resize(function(){
