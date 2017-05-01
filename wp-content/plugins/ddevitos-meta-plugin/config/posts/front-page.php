@@ -30,41 +30,19 @@ return array(
 				'fields'       => array(
 
 					array(
-						'title'                 => 'Front Page Hero Content',
-						'id'                    => '[frontpage_headline]',
-						'label'                 => 'frontpage_headline',
-						'desc'                  => 'Write an eye-catching headline right here.',
-						'type'                  => 'text_large',
-						// Key must be unique to the particular field
-						'key'                   => 'frontpage_headline',
-						'sanitization_callback' => 'sanitize_text_field',
-					),
-
-					array(
-						'title'                 => '',
-						'id'                    => '[frontpage_sub_headline]',
-						'label'                 => 'frontpage_sub_headline',
-						'desc'                  => 'Write an eye-catching SUB headline right here.',
-						'type'                  => 'text_large',
-						// Key must be unique to the particular field
-						'key'                   => 'frontpage_sub_headline',
-						'sanitization_callback' => 'sanitize_text_field',
-					),
-
-					array(
-						'title'                 => '',
-						'id'                    => '[frontpage_headline_list]',
-						'label'                 => 'frontpage_headline_list',
-						'desc'                  => 'Short list of highlighted features.',
+						'title'                 => 'Featured Item Title',
+						'id'                    => '[frontpage_featured_item_title]',
+						'label'                 => 'frontpage_featured_item_title',
+						'desc'                  => '',
 						'type'                  => 'editor',
 						// Key must be unique to the particular field
-						'key'                   => 'frontpage_headline_list',
+						'key'                   => 'frontpage_featured_item_title',
 						'sanitization_callback' => 'wp_kses_post',
 						'args'                  => array(
 //							'initial_content'  => 'initial content here',
 							'settings' => array(
 								'textarea_rows' => 10, // Default 10
-								'wpautop'       => false, // Default true
+								'wpautop'       => true, // Default true
 								'media_buttons' => true, // Default true
 								'tinymce'       => false,
 
@@ -73,16 +51,15 @@ return array(
 					),
 
 					array(
-						'title'                 => '',
-						'id'                    => '[front_hero_modal]',
-						'label'                 => 'front_hero_modal',
-						'desc'                  => 'Button Modal Link. Put the ID for the modal pop up here. ie (tbscDemoModal)',
-						'type'                  => 'text_medium',
+						'title'                 => 'Featured Item Picture',
+						'id'                    => '[frontpage_featured_item_pic]',
+						'label'                 => 'frontpage_featured_item_pic',
+						'desc'                  => '',
+						'type'                  => 'media',
 						// Key must be unique to the particular field
-						'key'                   => 'front_hero_modal',
+						'key'                   => 'frontpage_featured_item_pic',
 						'sanitization_callback' => 'sanitize_text_field',
 					),
-
 
 				),
 				/* end fields */

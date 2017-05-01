@@ -70,10 +70,10 @@ return array(
 						'sanitization_callback' => 'sanitize_text_field',
 					),
 					array(
-						'title'                 => 'Sidebar Summary Text (optional)',
+						'title'                 => 'Frontpage/Sidebar Summary Text',
 						'id'                    => '[post_side_bar_text]',
 						'label'                 => 'post_side_bar_text',
-						'desc'                  => 'This is the text that would appear if this post would appear on a sidebar',
+						'desc'                  => 'This is the text that will appear on the homepage and in the sidebar of the posts. ',
 						'type'                  => 'editor',
 						// Key must be unique to the particular field
 						'key'                   => 'post_side_bar_text',
