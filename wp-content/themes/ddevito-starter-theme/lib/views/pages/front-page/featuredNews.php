@@ -3,23 +3,14 @@
  * @author: Daniele De Vito
  * @date: 4/2/2017
  */
-$posts_array = get_posts(
-    array(
-        'posts_per_page' => 3,
-        'post_type' => 'featured_items',
-        'orderby' => 'menu_order',
-        'order' => 'ASC',
-        'tax_query' => array(
-            array(
-                'taxonomy' => 'tax_one',
-                'field' => 'slug',
-                'terms' => 'news'
-            )
+$posts_array = wp_get_recent_posts(
+        array(
+            'category_name' => 'news',
+            'posts_per_page' => 3,
+            'offset' => 1
         )
-    )
 );
 ?>
-
 <div class="frontPageTitleBar__wrap">
     <div class="frontPageTitleBar__inner">
         <div class="bar" id="news">
@@ -36,20 +27,25 @@ $posts_array = get_posts(
     <div class="featuredNews__inner">
         <?php
             foreach($posts_array as $post){
-                $metaArray = get_post_meta( $post->ID, "_featured_items_custom_meta", false )[0];
+                $metaArray = get_post_meta( $post['ID'], "_tbsc_single_posts_custom_meta", false )[0];
                 ?>
                 <div class="featuredNewsItem featuredItemGeneric">
                     <?php
-                    if($metaArray['featured_items_story_link']){
-                        echo '<a href="' . $metaArray['featured_items_story_link'] . '">';
-                    }
-                    echo get_the_post_thumbnail($post->ID);
-                    if($metaArray['featured_items_story_link']){
-                        echo '</a>';
-                    }
+                    echo '<a href="' . get_the_permalink($post['ID']) . '">';
                     ?>
-                    <h3><?php echo $metaArray['featured_items_story_title']; ?></h3>
-                    <p><?php echo $metaArray['featured_items_story_subtitle']; ?></p>
+                    <div class="imageWrap" style="
+                    <?php
+                    if(has_post_thumbnail($post['ID'])){
+                        echo "background: url('" . get_the_post_thumbnail_url($post['ID']) . "') no-repeat center center;";
+                    }else{
+                        echo "background: url('/images/news.jpg') no-repeat center center;";
+                    }
+                    ?>"></div>
+                    <h3><?php echo $post['post_title'] ?></h3>
+                    <p><?php echo $metaArray['post_side_bar_text'] ?></p>
+                    <?php
+                    echo '</a>';
+                    ?>
                 </div>
                 <?php
             }
