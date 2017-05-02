@@ -1,0 +1,9 @@
+body.search{
+
+  .inner-page-wrap{
+    @include grid-row();
+    #main{
+      @include grid-column(10);
+    }
+  }
+}

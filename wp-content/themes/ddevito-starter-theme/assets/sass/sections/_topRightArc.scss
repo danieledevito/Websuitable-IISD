@@ -1,0 +1,13 @@
+.arcWrap{
+  display: none;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  img{
+    //background: #fff;
+    height: 242px;
+  }
+  @media(min-width: 1440px){
+    display: inline-block;
+  }
+}
