@@ -35,7 +35,7 @@
 	}
 	?>
 	<div>
-	<a style="margin-top:1.16rem;background: #083166" href="<?php get_the_permalink($this->featuredPostId); ?>" class="read-more-button button radius">Read More</a>
+	<a style="margin-top:1.16rem;background: #083166" href="<?php echo get_the_permalink($this->featuredPostId); ?>" class="read-more-button button radius">Read More</a>
 	</div>
 </header>
 

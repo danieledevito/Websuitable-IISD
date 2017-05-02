@@ -14,13 +14,15 @@ $postArray = get_posts(
 
 <div class="frontPageTitleBar__wrap">
     <div class="frontPageTitleBar__inner">
-        <div class="bar" id="papers">
-            <div class="text-wrapper">
-                <div class="text-inner">
-                    Papers
+        <a href="/category/papers/">
+            <div class="bar" id="papers">
+                <div class="text-wrapper">
+                    <div class="text-inner">
+                        Papers
+                    </div>
                 </div>
             </div>
-        </div>
+        </a>
     </div>
 </div>
 

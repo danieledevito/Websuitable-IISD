@@ -12,14 +12,17 @@ $posts_array = wp_get_recent_posts(
 );
 ?>
 <div class="frontPageTitleBar__wrap">
+
     <div class="frontPageTitleBar__inner">
-        <div class="bar" id="news">
-            <div class="text-wrapper">
-                <div class="text-inner">
-                    News
+        <a href="/category/news/">
+            <div class="bar" id="news">
+                <div class="text-wrapper">
+                    <div class="text-inner">
+                        News
+                    </div>
                 </div>
             </div>
-        </div>
+        </a>
     </div>
 </div>
 

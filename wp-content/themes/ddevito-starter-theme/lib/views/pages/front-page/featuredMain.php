@@ -66,7 +66,7 @@ $posts_array = get_posts(
             }
             ?>") no-repeat center center;background-size: cover;-webkit-background-size: cover;'
             >
-            <a href="">
+            <a href="<?php echo get_the_permalink($featuredNewsPost[0]['ID']); ?>">
                 <div class="darken-overlay"></div>
                 <div class="imgWrap"></div>
                 <div class="colour-bar"></div>
@@ -86,7 +86,7 @@ $posts_array = get_posts(
         }
         ?>") no-repeat center center;background-size: cover;-webkit-background-size: cover;'
             >
-            <a href="">
+            <a href="<?php echo get_the_permalink($featuredPaperPost[0]['ID']); ?>">
                 <div class="darken-overlay"></div>
                 <div class="imgWrap"></div>
                 <div class="colour-bar"></div>
@@ -106,7 +106,7 @@ $posts_array = get_posts(
         }
         ?>") no-repeat center center;background-size: cover;-webkit-background-size: cover;'
             >
-            <a href="">
+            <a href="<?php echo get_the_permalink($featuredArticalPost[0]['ID']); ?>">
                 <div class="darken-overlay"></div>
                 <div class="imgWrap"></div>
                 <div class="colour-bar"></div>
