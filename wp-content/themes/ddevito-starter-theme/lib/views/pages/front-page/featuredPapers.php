@@ -43,15 +43,13 @@ $postArray = get_posts(
                     echo "background: url('/images/papers.jpg') no-repeat center center;";
                 }
                 ?>"></div>
-                <h3><?php echo $post->post_title ?></h3>
+                <h3><?php echo $post->post_title; ?></h3>
                 <p><?php
-
                     if($metaArray['post_side_bar_text']){
                         echo $metaArray['post_side_bar_text'];
                     }else{
                         echo wp_filter_nohtml_kses($post['post_content']);
                     }
-
                     ?>
                 </p>
                 <?php
