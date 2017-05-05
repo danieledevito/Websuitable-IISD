@@ -9,9 +9,4 @@
     <div class="about-page-content__inner">
         <?php the_content(); ?>
     </div>
-    <div class="about-page-sidebar">
-        <div class="about-page-sidebar__inner">
-
-        </div>
-    </div>
 </div>
