@@ -63,11 +63,10 @@ $headerFontFamily: Arial;
 
 $global-width: rem-calc(1200);
 $global-font-size: 100%;
-$global-lineheight: 1.5;
-$dark-blue: #1e3564;
-$primary-color: #2ac2eb;
-$light-blue: #2ac2eb;
-$secondary-color: #1e3564;
+$dark-blue: #083166;
+$primary-color: rgba(41, 195,236,1);
+$light-blue: rgba(41, 195,236,1);
+$secondary-color: #083166;
 $primary-color-dark: scale-color( $primary-color, $lightness: -15%);
 
 $gray: rgba(216,216,217,1);

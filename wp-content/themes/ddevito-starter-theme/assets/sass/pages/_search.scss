@@ -1,9 +1,13 @@
 body.search{
 
   .inner-page-wrap{
+    background: #fff;
+    padding-top: 0.5rem;
     @include grid-row();
     #main{
+      padding: 1.3rem!important;
       @include grid-column(10);
+
     }
   }
 }
