@@ -72,7 +72,7 @@ $posts_array = get_posts(
                 <div class="colour-bar"></div>
                 <div class="title">
                     <h3><?php echo $featuredNewsPost[0]['post_title']; ?></h3>
-                    <p><?php echo $featuredNewsPostMeta['post_side_bar_text'] ?></p>
+<!--                    <p>--><?php //echo $featuredNewsPostMeta['post_side_bar_text'] ?><!--</p>-->
                 </div>
             </a>
         </div>
@@ -92,7 +92,7 @@ $posts_array = get_posts(
                 <div class="colour-bar"></div>
                 <div class="title">
                     <h3><?php echo $featuredPaperPost[0]['post_title']; ?></h3>
-                    <p><?php echo $featuredPaperPostMeta['post_side_bar_text'] ?></p>
+<!--                    <p>--><?php //echo $featuredPaperPostMeta['post_side_bar_text'] ?><!--</p>-->
                 </div>
             </a>
         </div>
@@ -112,7 +112,7 @@ $posts_array = get_posts(
                 <div class="colour-bar"></div>
                 <div class="title">
                     <h3><?php echo $featuredArticalPost[0]['post_title']; ?></h3>
-                    <p><?php echo $featuredArticalPostMeta['post_side_bar_text'] ?></p>
+<!--                    <p>--><?php //echo $featuredArticalPostMeta['post_side_bar_text'] ?><!--</p>-->
                 </div>
             </a>
         </div>

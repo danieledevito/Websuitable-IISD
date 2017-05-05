@@ -28,12 +28,19 @@
 	<?php
 	the_archive_title( '<h1 class="postCatTitle">', '</h1>' );
 	echo '<h2 class="postCatDesc">' . get_the_title($this->featuredPostId) . '</h2>';
-	if($this->featuredPostMeta['post_summary']){
-		echo $this->featuredPostMeta['post_summary'];
-	}else{
-		echo get_the_excerpt($this->featuredPostId);
-	}
 	?>
+	<p class="featuredContent">
+
+		<?php
+		if($this->featuredPostMeta['post_summary'] != ""){
+			echo $this->featuredPostMeta['post_summary'];
+		}else{
+			$post = get_post($this->featuredPostId);
+			echo $post->post_content . "...";
+		}
+		?>
+	</p>
+
 	<div>
 	<a style="margin-top:1.16rem;background: #083166" href="<?php echo get_the_permalink($this->featuredPostId); ?>" class="read-more-button button radius">Read More</a>
 	</div>

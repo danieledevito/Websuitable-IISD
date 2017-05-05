@@ -45,7 +45,16 @@ $posts_array = wp_get_recent_posts(
                     }
                     ?>"></div>
                     <h3><?php echo $post['post_title'] ?></h3>
-                    <p><?php echo $metaArray['post_side_bar_text'] ?></p>
+                    <p>
+                        <?php
+                        if($metaArray['post_side_bar_text']){
+                            echo $metaArray['post_side_bar_text'];
+                        }else{
+                            echo $post['post_content'];
+                        }
+
+                        ?>
+                    </p>
                     <?php
                     echo '</a>';
                     ?>
