@@ -49,7 +49,7 @@ $postArray = get_posts(
                     if($metaArray['post_side_bar_text']){
                         echo $metaArray['post_side_bar_text'];
                     }else{
-                        echo esc_html($post['post_content']);
+                        echo wp_filter_nohtml_kses($post['post_content']);
                     }
 
                     ?>
