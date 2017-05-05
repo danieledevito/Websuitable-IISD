@@ -100,12 +100,12 @@
       }
       h3{
         text-transform: uppercase;
-        font-weight: 500;
+        font-weight: 600;
         font-family: $headerFontFamily;
         font-size: 1.3rem;
         overflow: hidden;
         display: -webkit-box;
-        -webkit-line-clamp: 2;
+        -webkit-line-clamp: 4;
         -webkit-box-orient: vertical;
         text-overflow: ellipsis;
         line-height: 20px;
@@ -234,7 +234,6 @@
   p{
     color: #000!important;
     line-height: 20px!important;
-    padding-left: 5px;
     overflow: hidden;
     display: -webkit-box;
     -webkit-line-clamp: 3;
