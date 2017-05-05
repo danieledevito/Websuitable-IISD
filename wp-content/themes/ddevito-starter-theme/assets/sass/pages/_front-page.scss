@@ -1,6 +1,7 @@
 .frontpage-content-wrap{
   @include grid-row();
   .frontpage-content-inner{
+    a{color: $black;}
     @include grid-column(12);
     background: #fff;
     .banner-wrap{
