@@ -50,7 +50,7 @@ $posts_array = wp_get_recent_posts(
                         if($metaArray['post_side_bar_text']){
                             echo $metaArray['post_side_bar_text'];
                         }else{
-                            echo $post['post_content'];
+                            echo esc_html($post['post_content']);
                         }
 
                         ?>
