@@ -56,7 +56,8 @@ class Header {
 		add_action( 'ezra_after_body_open',         array( $this, 'do_off_canvas' ) );
 		add_action( 'ezra_header',                  array( $this, 'do_main_header' ) );
 		add_action( 'ezra_before_body_close',       array( $this, 'close_off_canvas_wrapper' ) );
-		add_action( 'ezra_after_body_open', array( $this, 'getGreySkew' ) );
+		//Removed grey skew and arc as of 2017-05-23
+//		add_action( 'ezra_after_body_open', array( $this, 'getGreySkew' ) );
 //		add_action( 'ezra_before_header',           array( $this, 'do_contact_bar' ) );
 	}
 

@@ -232,3 +232,9 @@ function posts_order()
 {
 	add_post_type_support( 'post', 'page-attributes' );
 }
+
+add_action('admin_footer', function() {
+	?>
+	<script>jQuery('input#title').attr('maxlength', 85);</script>
+	<?php
+});

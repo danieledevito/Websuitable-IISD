@@ -50,7 +50,7 @@ $posts_array = get_posts(
                 <div class="imgWrap">
                     <img src="<?php echo $this->front_meta['frontpage_featured_item_pic']; ?>" alt="<?php echo $this->front_meta['frontpage_featured_item_title']; ?>"/>
                 </div>
-                <div class="colour-bar"></div>
+<!--                <div class="colour-bar"></div>-->
                 <div class="title">
                     <?php echo $this->front_meta['frontpage_featured_item_title']; ?>
                 </div>
@@ -69,7 +69,7 @@ $posts_array = get_posts(
             <a href="<?php echo get_the_permalink($featuredNewsPost[0]['ID']); ?>">
                 <div class="darken-overlay"></div>
                 <div class="imgWrap"></div>
-                <div class="colour-bar"></div>
+<!--                <div class="colour-bar"></div>-->
                 <div class="title">
                     <h3><?php echo $featuredNewsPost[0]['post_title']; ?></h3>
 <!--                    <p>--><?php //echo $featuredNewsPostMeta['post_side_bar_text'] ?><!--</p>-->
@@ -89,7 +89,7 @@ $posts_array = get_posts(
             <a href="<?php echo get_the_permalink($featuredPaperPost[0]['ID']); ?>">
                 <div class="darken-overlay"></div>
                 <div class="imgWrap"></div>
-                <div class="colour-bar"></div>
+<!--                <div class="colour-bar"></div>-->
                 <div class="title">
                     <h3><?php echo $featuredPaperPost[0]['post_title']; ?></h3>
 <!--                    <p>--><?php //echo $featuredPaperPostMeta['post_side_bar_text'] ?><!--</p>-->
@@ -109,7 +109,7 @@ $posts_array = get_posts(
             <a href="<?php echo get_the_permalink($featuredArticalPost[0]['ID']); ?>">
                 <div class="darken-overlay"></div>
                 <div class="imgWrap"></div>
-                <div class="colour-bar"></div>
+<!--                <div class="colour-bar"></div>-->
                 <div class="title">
                     <h3><?php echo $featuredArticalPost[0]['post_title']; ?></h3>
 <!--                    <p>--><?php //echo $featuredArticalPostMeta['post_side_bar_text'] ?><!--</p>-->

@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Template Name: Template Sample
+ * Template Name: Contact Page
  *
  * @package   Starter Theme
  * @author    Daniele De Vito
@@ -14,10 +14,10 @@ namespace TBSC;
 use TBSC\Base\Template;
 
 $page_settings = array(
-	'custom_page_classes' => 'tbsc-template',
+	'custom_page_classes' => 'iisd-contact',
 //	'header'    => '',
 //	'footer'    => '',
-	'entry' => 'TBSC\Pages\Page',
+	'entry' => 'TBSC\Pages\ContactPage',
 );
 
 $page_page = new Template( $page_settings );
