@@ -29,27 +29,30 @@ $postArray = get_posts(
 <div class="featuredNews__wrap">
     <div class="featuredNews__inner">
         <?php
-        foreach($postArray as $post){
-            $metaArray = get_post_meta( $post->ID, "_tbsc_single_posts_custom_meta", false )[0];
+        foreach($posts_array as $post){
+            $metaArray = get_post_meta( $post['ID'], "_tbsc_single_posts_custom_meta", false )[0];
             ?>
             <div class="featuredNewsItem featuredItemGeneric">
                 <?php
-                echo '<a href="' . get_the_permalink($post->ID) . '">';
+                echo '<a href="' . get_the_permalink($post['ID']) . '">';
                 ?>
-                <div class="imageWrap" style="<?php
-                if(has_post_thumbnail($post->ID)){
-                    echo "background: url('" . get_the_post_thumbnail_url($post->ID) . "') no-repeat center center;";
+                <div class="imageWrap" style="
+                    <?php
+                if(has_post_thumbnail($post['ID'])){
+                    echo "background: url('" . get_the_post_thumbnail_url($post['ID']) . "') no-repeat center center;";
                 }else{
-                    echo "background: url('/images/articals.jpg') no-repeat center center;";
+                    echo "background: url('/images/news.jpg') no-repeat center center;";
                 }
                 ?>"></div>
-                <h3><?php echo $post->post_title ?></h3>
-                <p><?php
+                <h3><?php echo $post['post_title']; ?></h3>
+                <p>
+                    <?php
                     if($metaArray['post_side_bar_text']){
                         echo $metaArray['post_side_bar_text'];
                     }else{
                         echo wp_filter_nohtml_kses($post['post_content']);
                     }
+
                     ?>
                 </p>
                 <?php
