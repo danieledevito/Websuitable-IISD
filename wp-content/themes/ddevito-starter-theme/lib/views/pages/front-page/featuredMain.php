@@ -14,7 +14,7 @@ $featuredNewsPostMeta = get_post_meta($featuredNewsPost[0]['ID'], "_tbsc_single_
 
 $featuredArticalPost = wp_get_recent_posts(array(
     'posts_per_page' => 1,
-    'category_name' => 'articals'
+    'category_name' => 'articles'
 ));
 $featuredArticalPostMeta = get_post_meta($featuredArticalPost[0]['ID'], "_tbsc_single_posts_custom_meta",false)[0];
 
