@@ -70,11 +70,11 @@ return array(
 						'sanitization_callback' => 'sanitize_text_field',
 					),
 					array(
-						'title'                 => 'Frontpage/Sidebar Summary Text',
+						'title'                 => 'Post Summary',
 						'id'                    => '[post_side_bar_text]',
 						'label'                 => 'post_side_bar_text',
-						'desc'                  => 'This is the text that will appear on the homepage and in the sidebar of the posts. ',
-						'type'                  => 'editor',
+						'desc'                  => 'This is the text that will appear in all instances of this posts summary. ',
+						'type'                  => 'editor_char_count',
 						// Key must be unique to the particular field
 						'key'                   => 'post_side_bar_text',
 						'sanitization_callback' => 'wp_kses_post',
@@ -89,27 +89,6 @@ return array(
 							),
 						),
 					),
-					array(
-						'title'                 => 'Post Summary (optional)',
-						'id'                    => '[post_summary]',
-						'label'                 => 'post_summary',
-						'desc'                  => 'The text that would appear when navigating through this posts category',
-						'type'                  => 'editor',
-						// Key must be unique to the particular field
-						'key'                   => 'post_summary',
-						'sanitization_callback' => 'wp_kses_post',
-						'args'                  => array(
-//							'initial_content'  => 'initial content here',
-							'settings' => array(
-								'textarea_rows' => 10, // Default 10
-								'wpautop'       => false, // Default true
-								'media_buttons' => true, // Default true
-								'tinymce'       => false,
-
-							),
-						),
-					)
-
 				),
 				/* end fields */
 			), /* end metabox 1 */
