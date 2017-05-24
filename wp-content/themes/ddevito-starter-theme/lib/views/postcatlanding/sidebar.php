@@ -36,23 +36,12 @@ $posts_array = get_posts(
                             <h4><?php
                                 echo $post->post_title
                                 ?></h4>
-                            <p>
-                                <?php
-                                $specifcPostMeta = get_post_meta($post->ID,'_tbsc_single_posts_custom_meta', false )[0];
-                                if($specifcPostMeta['post_side_bar_text']){
-                                    echo $specifcPostMeta['post_side_bar_text'];
-                                }else{
-                                    echo $post->post_excerpt;
-                                }
-                                ?>
-                            </p>
                         </div>
                     <?php
                 }else{
                     ?>
                     <div class="small-12 column featuredPostContent">
                         <h4><?php echo $post->post_title ?></h4>
-                        <p><?php echo $post->post_excerpt ?></p>
                     </div>
                     <?php
                 }?>

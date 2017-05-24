@@ -14,6 +14,7 @@
       -webkit-line-clamp: 4;
       -webkit-box-orient: vertical;
       text-overflow: ellipsis;
+      font-size: 1.5rem;
     }
     .postCatDesc{
       font-size: 2.5rem;
@@ -164,7 +165,7 @@
           font-weight: bold;
           overflow: hidden;
           display: -webkit-box;
-          -webkit-line-clamp: 1;
+          -webkit-line-clamp: 4;
           -webkit-box-orient: vertical;
           text-overflow: ellipsis;
         }

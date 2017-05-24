@@ -32,8 +32,8 @@ if(get_the_ID() != $this->featuredPostId){
 <!--						<div class="thumbWrap">--><?php //the_post_thumbnail() ?><!--</div>-->
 						<div class="contentWrap">
 							<?php
-							if($single_post_meta && $single_post_meta['post_summary']){
-								echo $single_post_meta['post_summary'];
+							if($single_post_meta && $single_post_meta['post_side_bar_text']){
+								echo $single_post_meta['post_side_bar_text'];
 							}else{
 								the_excerpt();
 							}
@@ -47,8 +47,8 @@ if(get_the_ID() != $this->featuredPostId){
 							<h2><?php the_title() ?></h2>
 							<div class="contentWrap">
 								<?php
-								if($single_post_meta && $single_post_meta['post_summary']){
-									echo $single_post_meta['post_summary'];
+								if($single_post_meta && $single_post_meta['post_side_bar_text']){
+									echo $single_post_meta['post_side_bar_text'];
 								}else{
 									the_excerpt();
 								}
@@ -65,8 +65,8 @@ if(get_the_ID() != $this->featuredPostId){
 					<h2><?php the_title() ?></h2>
 					<div class="contentWrap">
 						<?php
-						if($single_post_meta && $single_post_meta['post_summary']){
-							echo $single_post_meta['post_summary'];
+						if($single_post_meta && $single_post_meta['post_side_bar_text']){
+							echo $single_post_meta['post_side_bar_text'];
 						}else{
 							the_excerpt();
 						}

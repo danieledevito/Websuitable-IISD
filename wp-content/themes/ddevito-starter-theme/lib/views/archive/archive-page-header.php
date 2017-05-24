@@ -32,8 +32,8 @@
 	<p class="featuredContent">
 
 		<?php
-		if($this->featuredPostMeta['post_summary'] != ""){
-			echo $this->featuredPostMeta['post_summary'];
+		if($this->featuredPostMeta['post_side_bar_text'] != ""){
+			echo $this->featuredPostMeta['post_side_bar_text'];
 		}else{
 			$post = get_post($this->featuredPostId);
 			echo $post->post_content . "...";
