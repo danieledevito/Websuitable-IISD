@@ -17,6 +17,7 @@ return [
         'text_medium' => 'text-medium.php',
         'text_large' => 'text-large.php',
         'text_area' => 'text-area.php',
+        'editor_char_count' => 'editor-char-count.php',
         'editor' => 'editor.php',
         'checkbox' => 'checkbox.php',
         'media' => 'file-upload.php',

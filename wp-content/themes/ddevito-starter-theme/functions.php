@@ -262,3 +262,12 @@ function my_title_count(){
 	</script>
 	<?php
 }
+
+add_action( 'wp_head', __NAMESPACE__ . '\\add_fonts' );
+
+function add_fonts(){
+	?>
+	<script src="https://use.typekit.net/tqw7fwd.js"></script>
+	<script>try{Typekit.load({ async: true });}catch(e){}</script>
+	<?php
+}

@@ -28,7 +28,7 @@ if(has_post_thumbnail()){
 $postCategories = wp_get_post_categories(get_the_ID());
 ?>
 <div class="mainPostWrap">
-	<div class="entryWrap">
+	<div class="entryWrap" id="storyAnchor">
 		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> role="article">
 			<h4 class="catWrap">
 				<?php

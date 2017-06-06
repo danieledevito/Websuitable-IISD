@@ -34,7 +34,7 @@ $postArray = get_posts(
             ?>
             <div class="featuredNewsItem featuredItemGeneric">
                 <?php
-                echo '<a href="' . get_the_permalink($post['ID']) . '">';
+                echo '<a href="' . get_the_permalink($post['ID']) . '#storyAnchor">';
                 ?>
                 <div class="imageWrap" style="
                     <?php
