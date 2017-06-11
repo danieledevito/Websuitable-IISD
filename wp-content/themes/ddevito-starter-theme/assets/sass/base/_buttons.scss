@@ -5,11 +5,14 @@ input[type="button"] {
 
 
 .button{
-  background: transparent!important;
+  background: transparent !important;
   color: $secondary-color!important;
   text-transform: uppercase;
   font-family: proxima-nova;
   font-size: 18px;
+  font-weight: 600;
+  padding: 0;
+  margin-bottom: 15px;
   &:hover{
     background: transparent!important;
     color: $primary-color!important;
