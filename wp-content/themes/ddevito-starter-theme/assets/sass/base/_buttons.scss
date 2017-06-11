@@ -2,3 +2,16 @@ input[type="submit"],
 input[type="button"] {
   @include button;
 }
+
+
+.button{
+  background: transparent!important;
+  color: $secondary-color!important;
+  text-transform: uppercase;
+  font-family: proxima-nova;
+  font-size: 18px;
+  &:hover{
+    background: transparent!important;
+    color: $primary-color!important;
+  }
+}
