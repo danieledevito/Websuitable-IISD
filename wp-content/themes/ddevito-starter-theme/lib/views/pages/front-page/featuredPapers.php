@@ -3,13 +3,6 @@
  * @author: Daniele De Vito
  * @date: 4/2/2017
  */
-$postArray = get_posts(
-    array(
-        'category_name' => 'papers',
-        'posts_per_page' => 3,
-        'offset' => 1
-    )
-);
 ?>
 
 <div class="frontPageTitleBar__wrap">
@@ -18,7 +11,7 @@ $postArray = get_posts(
             <div class="bar" id="papers">
                 <div class="text-wrapper">
                     <div class="text-inner">
-                        Papers
+                        Research and Reports
                     </div>
                 </div>
             </div>
@@ -29,7 +22,7 @@ $postArray = get_posts(
 <div class="featuredNews__wrap">
     <div class="featuredNews__inner">
         <?php
-        foreach($posts_array as $post){
+        foreach($this->recentPapers as $post){
             $metaArray = get_post_meta( $post['ID'], "_tbsc_single_posts_custom_meta", false )[0];
             ?>
             <div class="featuredNewsItem featuredItemGeneric">

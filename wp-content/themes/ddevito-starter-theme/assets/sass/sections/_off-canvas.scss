@@ -5,6 +5,8 @@
 .off-canvas-content {
   box-shadow: none;
   border-left:1px solid #887e7e;
+  p{font-family: adobe-garamond-pro}
+  h1,h2,h3,h4,h5,h6{font-family: proxima-nova}
 }
 
 .ofc-home {
@@ -39,6 +41,7 @@
     padding: 0.5rem 0 0.5rem 1rem;
     text-transform: capitalize;
     width: 100%;
+    font-family: proxima-nova;
   }
 
 }

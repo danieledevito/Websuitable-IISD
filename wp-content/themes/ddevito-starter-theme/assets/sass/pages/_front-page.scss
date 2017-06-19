@@ -65,7 +65,7 @@
       line-height: 1rem;
       padding: 5px;
       transform: skewX(25deg);
-      width: 125px;
+      width: 245px;
       padding-left: 20px;
     }
   }
@@ -232,11 +232,14 @@
   }
   p{
     color: #000!important;
-    line-height: 20px!important;
+    line-height: 20px;
     overflow: hidden;
     display: -webkit-box;
-    -webkit-line-clamp: 5;
     -webkit-box-orient: vertical;
+    font-size: 17px;
+    @include breakpoint(large){
+      -webkit-line-clamp: 8;
+    }
   }
 }
 @include breakpoint(medium){

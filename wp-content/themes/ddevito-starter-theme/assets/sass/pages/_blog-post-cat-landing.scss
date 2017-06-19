@@ -9,12 +9,7 @@
       text-transform: uppercase;
     }
     .featuredContent{
-      overflow: hidden;
-      display: -webkit-box;
-      -webkit-line-clamp: 4;
-      -webkit-box-orient: vertical;
-      text-overflow: ellipsis;
-      font-size: 1.5rem;
+      font-size: 17px;
     }
     .postCatDesc{
       font-size: 2.5rem;
@@ -103,14 +98,17 @@
          color: $black;
          overflow: hidden;
          display: -webkit-box;
-         -webkit-line-clamp: 4;
+         -webkit-line-clamp: 6;
          -webkit-box-orient: vertical;
          text-overflow: ellipsis;
          margin-bottom: 1.15rem;
+         font-size: 17px;
        }
        .contentWrap p{
+         -webkit-line-clamp: 6;
          overflow: hidden;
          margin-bottom: 0rem;
+          font-size: 17px;
        }
        .forDesktop{
         display: none;
@@ -156,18 +154,13 @@
       .featuredPostContent{
         overflow: hidden;
         display: -webkit-box;
-        -webkit-line-clamp: 2;
+        -webkit-line-clamp: 4;
         -webkit-box-orient: vertical;
         padding-right: 0;
         h4{
           margin-bottom: 0;
           font-size: 1.2rem;
           font-weight: bold;
-          overflow: hidden;
-          display: -webkit-box;
-          -webkit-line-clamp: 4;
-          -webkit-box-orient: vertical;
-          text-overflow: ellipsis;
         }
         p{
           color: $black;
@@ -228,5 +221,17 @@
   }
   .postCatTitle, .catPageSideBar h3{
     color: $yellow;
+  }
+}
+
+.category-papers{
+  .landingBodyWrap .postWrap .postEntry .innerPostWrap .contentWrap{
+   -webkit-line-clamp: 8;
+  }
+  .landingBodyWrap .catPageSideBar .catPageSideBar__inner .featuredPostContent h4{
+    font-size: 1rem;
+    @media (min-width: 1440px) {
+      font-size: 1.15rem;
+    }
   }
 }

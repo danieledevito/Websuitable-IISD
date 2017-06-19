@@ -3,13 +3,6 @@
  * @author: Daniele De Vito
  * @date: 4/2/2017
  */
-$postArray = get_posts(
-    array(
-        'category_name' => 'articles',
-        'posts_per_page' => 3,
-        'offset' => 1
-    )
-);
 ?>
 
 <div class="frontPageTitleBar__wrap">
@@ -18,7 +11,7 @@ $postArray = get_posts(
             <div class="bar" id="articles">
                 <div class="text-wrapper">
                     <div class="text-inner">
-                        Articles
+                        Articles & Publications
                     </div>
                 </div>
             </div>
@@ -29,21 +22,21 @@ $postArray = get_posts(
 <div class="featuredNews__wrap">
     <div class="featuredNews__inner">
         <?php
-        foreach($postArray as $post){
-            $metaArray = get_post_meta( $post->ID, "_tbsc_single_posts_custom_meta", false )[0];
+        foreach($this->recentArticles as $post){
+            $metaArray = get_post_meta( $post['ID'], "_tbsc_single_posts_custom_meta", false )[0];
             ?>
             <div class="featuredNewsItem featuredItemGeneric">
                 <?php
-                echo '<a href="' . get_the_permalink($post->ID) . '#f">';
+                echo '<a href="' . get_the_permalink($post['ID']) . '#f">';
                 ?>
                 <div class="imageWrap" style="<?php
-                if(has_post_thumbnail($post->ID)){
-                    echo "background: url('" . get_the_post_thumbnail_url($post->ID) . "') no-repeat center center;";
+                if(has_post_thumbnail($post['ID'])){
+                    echo "background: url('" . get_the_post_thumbnail_url($post['ID']) . "') no-repeat center center;";
                 }else{
-                    echo "background: url('/images/articals.jpg') no-repeat center center;";
+                    echo "background: url('/images/artical.jpg') no-repeat center center;";
                 }
                 ?>"></div>
-                <h3><?php echo $post->post_title ?></h3>
+                <h3><?php echo $post['post_title'] ?></h3>
                 <p><?php
                     if($metaArray['post_side_bar_text']){
                         echo $metaArray['post_side_bar_text'];
