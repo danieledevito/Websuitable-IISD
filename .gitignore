@@ -102,7 +102,7 @@ wp-content/plugins/tbsc-meta-plugin/vendor
 wp-content/plugins/tbsc-options/vendor
 
 wp-content/themes/ddevito-starter-theme/vendor
-
+wp-content/themes/ddevito-starter-theme/plugins/gravityforms
 wp-content/themes/ddevito-starter-theme/.sass-cache
 wp-content/themes/ddevito-starter-theme/node_modules
 wp-content/themes/ddevito-starter-theme/npm-debug.log
