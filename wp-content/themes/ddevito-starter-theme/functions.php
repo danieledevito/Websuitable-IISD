@@ -184,12 +184,11 @@ function admin_style(){
 }
 
 
-add_filter( 'get_the_archive_title', function ($title) {
+add_filter( 'get_the_archive_title', __NAMESPACE__ . '\\getTitleForCat');
 
+function getTitleForCat(){
 	if ( is_category() ) {
-
 		$title = single_cat_title( '', false );
-
 	} elseif ( is_tag() ) {
 
 		$title = single_tag_title( '', false );
@@ -202,27 +201,31 @@ add_filter( 'get_the_archive_title', function ($title) {
 
 	return $title;
 
-});
-add_action ( 'edit_category_form_fields', __NAMESPACE__ . '\\addTitleFieldToCat');
-function addTitleFieldToCat(){
-	$cat_title = get_term_meta($_GET['tag_ID'], '_pagetitle', true);
+}
+add_action ( 'edit_tag_form_fields', __NAMESPACE__ . '\\addTagCategoryPicker');
+function addTagCategoryPicker(){
+	$tag_cat = get_term_meta($_GET['tag_ID'], '_tag_cat', true);
 	?>
 
 	<tr class="form-field">
-		<th scope="row" valign="top"><label for="cat_page_title"><?php _e('Category Page Sub-Title'); ?></label></th>
+		<th scope="row" valign="top"><label for="cat_page_title"><?php _e('Tag Category'); ?></label></th>
 		<td>
-			<input type="text" name="cat_title" id="cat_title" value="<?php echo $cat_title ?>"><br />
-			<span class="description"><?php _e('Sub-Title for the Category '); ?></span>
+			<select name="tag_cat" id="tag_cat">
+				<option <?php if($tag_cat == 'issues'){ echo 'selected'; } ?> value="issues">Issues</option>
+				<option <?php if($tag_cat == 'actors'){ echo 'selected'; } ?> value="actors">Actors</option>
+				<option <?php if($tag_cat == 'regions'){ echo 'selected'; } ?> value="regions">Regions</option>
+			</select>
+			<p class="description">The tag will show up under this category.</p>
 		</td>
 	</tr>
 	<?php
 
 }
 
-add_action ( 'edited_category', __NAMESPACE__ . '\\saveCategoryFields');
-function saveCategoryFields() {
-	if ( isset( $_POST['cat_title'] ) ) {
-		update_term_meta($_POST['tag_ID'], '_pagetitle', $_POST['cat_title']);
+add_action ( 'edited_post_tag', __NAMESPACE__ . '\\saveTagCat');
+function saveTagCat() {
+	if ( isset( $_POST['tag_cat'] ) ) {
+		update_term_meta($_POST['tag_ID'], '_tag_cat', $_POST['tag_cat']);
 	}
 }
 

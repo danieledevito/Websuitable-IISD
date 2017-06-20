@@ -51,30 +51,71 @@ $posts_array = get_posts(
             }
             ?>
         </div>
-        <?php if($this->common_meta['post_issues']){ ?>
+
+        <?php
+        $issuesArray = array();
+        $actorsArray = array();
+        $regionsArray = array();
+        $postTags = get_the_tags();
+        if($postTags){
+            foreach($postTags as $tag){
+                $tagCat = get_term_meta($tag->term_id)['_tag_cat'][0];
+                if($tagCat){
+                    if($tagCat == 'issues'){
+                        array_push($issuesArray,$tag);
+                    }elseif ($tagCat == 'actors'){
+                        array_push($actorsArray, $tag);
+                    }elseif($tagCat == 'regions'){
+                        array_push($regionsArray,$tag);
+                    }
+                }
+            }
+        }
+        ?>
+
+        <?php if($issuesArray){ ?>
             <h3 <?php if($this->common_meta['post_color']){ echo "style='color:#" . $this->common_meta['post_color'] . "';";} ?>>
                 Issues
             </h3>
             <div class="sidebarSection issues">
-                <p><?php echo $this->common_meta['post_issues']; ?></p>
+                <?php
+                foreach($issuesArray as $issue){
+                    ?>
+                    <p><?php echo $issue->name ?> </p>
+                    <?php
+                }
+                ?>
             </div>
         <?php }?>
 
-        <?php if($this->common_meta['post_actors']){ ?>
+        <?php if($actorsArray){ ?>
             <h3 <?php if($this->common_meta['post_color']){ echo "style='color:#" . $this->common_meta['post_color'] . "';";} ?>>
                 Regions
             </h3>
             <div class="sidebarSection issues">
-                <p><?php echo $this->common_meta['post_actors']; ?></p>
+                <?php
+                foreach($actorsArray as $actor){
+                    ?>
+                    <p><?php echo $actor->name ?> </p>
+                    <?php
+                }
+                ?>
             </div>
         <?php }?>
 
-        <?php if($this->common_meta['post_regions']){ ?>
+        <?php if($regionsArray){ ?>
             <h3 <?php if($this->common_meta['post_color']){ echo "style='color:#" . $this->common_meta['post_color'] . "';";} ?>>
                 Actors
             </h3>
             <div class="sidebarSection issues">
-                <p><?php echo $this->common_meta['post_regions']; ?></p>
+                <?php
+                foreach($regionsArray as $region){
+                    ?>
+                    <p><?php echo $region->name ?> </p>
+                    <?php
+                }
+                ?>
+
             </div>
         <?php }?>
     </div>
