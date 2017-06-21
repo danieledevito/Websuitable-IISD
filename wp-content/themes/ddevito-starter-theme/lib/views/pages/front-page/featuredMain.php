@@ -6,28 +6,24 @@
 use TBSC_Core\Support\CustomData;
 ?>
 
+
+
 <div class="featuredMain__wrap">
     <div class="featuredMain__inner">
 
-        <div class="featured-item" style='
-            background: url("<?php
-        if(has_post_thumbnail($this->newsPosts[0]['ID'])){
-            echo get_the_post_thumbnail_url($this->newsPosts[0]['ID']);
-        }else{
-            echo '/images/news.jpg';
-        }
-        ?>") no-repeat center center;background-size: cover;-webkit-background-size: cover;'
-            >
+        <div class="featured-item item-1">
             <a href="<?php echo get_the_permalink($this->newsPosts[0]['ID']); ?>#storyAnchor">
                 <div class="darken-overlay"></div>
-                <div class="imgWrap"></div>
-                <!--                <div class="colour-bar"></div>-->
+                <div class="imgWrap">
+                    <img src="<?php echo $this->front_meta['frontpage_featured_item_pic']; ?>" alt="<?php echo $this->front_meta['frontpage_featured_item_title']; ?>"/>
+                </div>
                 <div class="title">
-                    <h3><?php echo $this->newsPosts[0]['post_title']; ?></h3>
-                    <!--                    <p>--><?php //echo $this->newsPostsMeta['post_side_bar_text'] ?><!--</p>-->
+                    <h3>SUSTAINABLE<br/>INFRASTRUCTURE<br/>PRIMER</h3>
                 </div>
             </a>
         </div>
+
+
 
         <div class="featured-item" style='
             background: url("<?php
