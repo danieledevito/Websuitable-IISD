@@ -78,28 +78,5 @@ if(get_the_ID() != $this->featuredPostId){
 				}
 			?>
 		</div>
-<!--	</a>-->
-<!--	<header class="entry-header">-->
-<!--		<h2 class="entry-title"><a href="--><?php //the_permalink() ?><!--">--><?php
-//				if ( CustomData::available( 'custom_title', $this->common_meta ) ) {
-//					echo $this->common_meta['custom_title'];
-//				} else {
-//					the_title();
-//				}
-//				?><!--</a></h2>-->
-
-<!--		<div class="entry-meta">-->
-<!--			Published on --><?php //$post_meta->do_entry_date();?>
-<!--		</div>-->
-<!--	</header>-->
-
-<!--	<div class="entry-content">-->
-<!--		--><?php //the_excerpt(); ?>
-<!--	</div>-->
-<!---->
-<!--	<footer class="entry-footer">-->
-<!--		<a href="--><?php //the_permalink(); ?><!--" class="read-more-button button radius">Read More</a>-->
-<!--	</footer>-->
-
 </article>
 <?php } ?>

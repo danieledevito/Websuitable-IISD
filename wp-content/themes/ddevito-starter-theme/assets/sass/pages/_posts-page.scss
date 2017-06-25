@@ -81,6 +81,9 @@
       }
 
       .singlePostSidebar{
+        a{
+          color: #222;
+        }
         @include grid-column(12);
         h3{
           font-weight: bold;

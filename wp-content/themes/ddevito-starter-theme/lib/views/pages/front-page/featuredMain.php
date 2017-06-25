@@ -12,7 +12,7 @@ use TBSC_Core\Support\CustomData;
     <div class="featuredMain__inner">
 
         <div class="featured-item item-1">
-            <a href="<?php echo get_the_permalink($this->newsPosts[0]['ID']); ?>#storyAnchor">
+            <a href="/category/news/">
                 <div class="darken-overlay"></div>
                 <div class="imgWrap">
                     <img src="<?php echo $this->front_meta['frontpage_featured_item_pic']; ?>" alt="<?php echo $this->front_meta['frontpage_featured_item_title']; ?>"/>
@@ -34,12 +34,12 @@ use TBSC_Core\Support\CustomData;
             }
             ?>") no-repeat center center;background-size: cover;-webkit-background-size: cover;'
             >
-            <a href="<?php echo get_the_permalink($this->newsPosts[1]['ID']); ?>#storyAnchor">
+            <a href="<?php echo get_the_permalink($this->newsPosts[0]['ID']); ?>#storyAnchor">
                 <div class="darken-overlay"></div>
                 <div class="imgWrap"></div>
 <!--                <div class="colour-bar"></div>-->
                 <div class="title">
-                    <h3><?php echo $this->newsPosts[1]['post_title']; ?></h3>
+                    <h3><?php echo $this->newsPosts[0]['post_title']; ?></h3>
 <!--                    <p>--><?php //echo $this->newsPostsMeta['post_side_bar_text'] ?><!--</p>-->
                 </div>
             </a>

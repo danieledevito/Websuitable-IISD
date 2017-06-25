@@ -71,6 +71,7 @@ $posts_array = get_posts(
                 }
             }
         }
+
         ?>
 
         <?php if($issuesArray){ ?>
@@ -78,44 +79,49 @@ $posts_array = get_posts(
                 Issues
             </h3>
             <div class="sidebarSection issues">
-                <?php
-                foreach($issuesArray as $issue){
-                    ?>
-                    <p><?php echo $issue->name ?> </p>
+                <p>
                     <?php
-                }
-                ?>
+                    $issuesText = "";
+                    foreach($issuesArray as $issues){
+                        $issuesText = $issuesText . '<a href="' . get_tag_link($issues->term_id) . '">' . $issues->name . '</a>, ';
+                    }
+                    echo rtrim($issuesText, ", ");
+                    ?>
+                </p>
             </div>
         <?php }?>
 
         <?php if($actorsArray){ ?>
             <h3 <?php if($this->common_meta['post_color']){ echo "style='color:#" . $this->common_meta['post_color'] . "';";} ?>>
-                Regions
+                Actors
             </h3>
             <div class="sidebarSection issues">
-                <?php
-                foreach($actorsArray as $actor){
-                    ?>
-                    <p><?php echo $actor->name ?> </p>
+                <p>
                     <?php
-                }
-                ?>
+                    $actorsText = "";
+                    foreach($actorsArray as $actors){
+                        $actorsText = $actorsText . '<a href="' . get_tag_link($actors->term_id) . '">' . $actors->name . '</a>, ';
+                    }
+                    echo rtrim($actorsText, ", ");
+                    ?>
+                </p>
             </div>
         <?php }?>
 
         <?php if($regionsArray){ ?>
             <h3 <?php if($this->common_meta['post_color']){ echo "style='color:#" . $this->common_meta['post_color'] . "';";} ?>>
-                Actors
+                Regions
             </h3>
             <div class="sidebarSection issues">
+                <p>
                 <?php
+                $regionText = "";
                 foreach($regionsArray as $region){
-                    ?>
-                    <p><?php echo $region->name ?> </p>
-                    <?php
+                    $regionText = $regionText . '<a href="' . get_tag_link($region->term_id) . '">' . $region->name . '</a>, ';
                 }
+                echo rtrim($regionText, ", ");
                 ?>
-
+                </p>
             </div>
         <?php }?>
     </div>

@@ -240,11 +240,13 @@ add_action('admin_footer', function() {
 	?>
 	<script>jQuery('input#title').attr('maxlength', 100);</script>
 	<script>
-		jQuery(".charCountWrap textarea").attr("maxlength","290");
-		jQuery("#postSummaryCharCount").text(jQuery(".charCountWrap textarea").val().length);
-		jQuery(".charCountWrap textarea").keyup( function() {
+		if(jQuery(".charCountWrap textarea").length){
+			jQuery(".charCountWrap textarea").attr("maxlength","290");
 			jQuery("#postSummaryCharCount").text(jQuery(".charCountWrap textarea").val().length);
-		});
+			jQuery(".charCountWrap textarea").keyup( function() {
+				jQuery("#postSummaryCharCount").text(jQuery(".charCountWrap textarea").val().length);
+			});
+		}
 	</script>
 	<?php
 });

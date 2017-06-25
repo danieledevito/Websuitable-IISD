@@ -1,0 +1,77 @@
+.tag-page-wrap{
+
+  @include grid-row();
+  .tag-page__inner{
+    @include grid-column(12);
+
+
+  }
+}
+.tag-body-header-wrap{
+  @include grid-column(12);
+}
+.tagBodyWrap{
+  .tagBodyInner{
+    @include grid-column(12);
+  }
+  .postEntry{
+    padding: 0.5rem 0;
+    .innerPostWrap {
+      @include grid-row();
+      hr {
+        margin-top: 1rem
+      }
+      h2 {
+        text-transform: uppercase;
+        font-weight: bold;
+        margin-bottom: 0;
+      }
+      .read-more-button {
+        background-color: $dark-blue;
+      }
+      .contentWrap {
+        color: $black;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 6;
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
+        margin-bottom: 1.15rem;
+        font-size: 17px;
+      }
+      .contentWrap p {
+        -webkit-line-clamp: 6;
+        overflow: hidden;
+        margin-bottom: 0rem;
+        font-size: 17px;
+      }
+      .forDesktop {
+        display: none;
+        .thumbWrap {
+          height: 200px;
+          margin-bottom: 1rem;
+          -webkit-background-size: cover !important;
+          background-size: cover !important;
+        }
+      }
+      @include breakpoint(medium) {
+        .forMobile {
+          display: none;
+        }
+        .forDesktop {
+          display: block;
+        }
+      }
+      @include breakpoint(large) {
+
+      }
+    }
+  }
+}
+
+.tag{
+  .paginate-links-section{
+    @include grid-row();
+
+  }
+}

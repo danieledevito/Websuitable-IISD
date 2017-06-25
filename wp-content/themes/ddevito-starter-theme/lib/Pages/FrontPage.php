@@ -54,7 +54,7 @@ class FrontPage {
 		foreach($this->newsPosts as $newsPost){
 			array_push($this->postsOnPage, $newsPost['ID']);
 		}
-		$this->recentNews = array($this->newsPosts[2],$this->newsPosts[3],$this->newsPosts[4]);
+		$this->recentNews = array($this->newsPosts[1],$this->newsPosts[2],$this->newsPosts[3]);
 
 		$this->articlePosts = wp_get_recent_posts(array(
 			'numberposts' => 4,
