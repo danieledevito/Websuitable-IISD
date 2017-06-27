@@ -30,16 +30,24 @@ class SearchPage {
 	}
 
 	public function do_the_entry() {
-		add_action( 'ezra_before_entry', array( $this, 'do_page_header' ) );
+		add_action( 'ezra_after_header', array( $this, 'do_page_header' ) );
+		add_action( 'ezra_after_header', array( $this, 'getPageWrapStart' ) );
+
 		add_action( 'ezra_entry', array( $this, 'do_page_content' ) );
 		add_action( 'ezra_after_loop', array( $this->pagination, 'do_pagination' ) );
+		add_action( 'ezra_after_loop', array( $this, 'getPageWrapEnd' ) );
 	}
-
+	public function getPageWrapStart() {
+		?><div class="search-page-wrapper"><div class="search-page__inner"><?php
+	}
+	public function getPageWrapEnd(){
+		?></div></div><?php
+	}
 	public function do_page_header() {
 		include( Views::load_view( TBSC_VIEWS_DIR . 'search/search-page-header.php' ) );
 	}
 
 	public function do_page_content() {
-		include( Views::load_view( TBSC_VIEWS_DIR . 'archive/entry.php' ) );
+		include( Views::load_view( TBSC_VIEWS_DIR . 'search/entry.php' ) );
 	}
 }

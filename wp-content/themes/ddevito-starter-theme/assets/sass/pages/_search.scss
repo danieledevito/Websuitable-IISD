@@ -2,12 +2,75 @@ body.search{
 
   .inner-page-wrap{
     background: #fff;
-    padding-top: 0.5rem;
-    @include grid-row();
+    margin-top: 0!important;
     #main{
-      padding: 1.3rem!important;
-      @include grid-column(10);
 
+    }
+  }
+}
+
+.search-page-header{
+  margin-top: 2rem;
+  @include grid-row();
+  .page-header__heading{
+    @include grid-column(12);
+  }
+}
+
+.search-page-wrapper{
+@include grid-row();
+  .search-page__inner{
+    @include grid-column(12);
+    .postEntry{
+      padding: 0.5rem 0;
+      .innerPostWrap{
+        @include grid-row();
+        hr{margin-top: 1rem}
+        h2{
+          text-transform: uppercase;
+          font-weight: bold;
+          margin-bottom: 0;
+        }
+        .read-more-button{
+          background-color: $dark-blue;
+        }
+        .contentWrap{
+          color: $black;
+          overflow: hidden;
+          display: -webkit-box;
+          -webkit-line-clamp: 6;
+          -webkit-box-orient: vertical;
+          text-overflow: ellipsis;
+          margin-bottom: 1.15rem;
+          font-size: 17px;
+        }
+        .contentWrap p{
+          -webkit-line-clamp: 6;
+          overflow: hidden;
+          margin-bottom: 0rem;
+          font-size: 17px;
+        }
+        .forDesktop{
+          display: none;
+          .thumbWrap{
+            height: 200px;
+            margin-bottom: 1rem;
+            -webkit-background-size: cover!important;
+            background-size: cover!important;
+          }
+        }
+        @include breakpoint(medium){
+          .forMobile{
+            display: none;
+          }
+          .forDesktop{
+            display: block;
+          }
+        }
+        @include breakpoint(large){
+
+        }
+      }
     }
   }
 }

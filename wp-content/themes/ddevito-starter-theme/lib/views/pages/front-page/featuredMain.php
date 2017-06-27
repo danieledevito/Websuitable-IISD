@@ -12,7 +12,7 @@ use TBSC_Core\Support\CustomData;
     <div class="featuredMain__inner">
 
         <div class="featured-item item-1">
-            <a href="/category/news/">
+            <a href="/sustainable-development/">
                 <div class="darken-overlay"></div>
                 <div class="imgWrap">
                     <img src="<?php echo $this->front_meta['frontpage_featured_item_pic']; ?>" alt="<?php echo $this->front_meta['frontpage_featured_item_title']; ?>"/>

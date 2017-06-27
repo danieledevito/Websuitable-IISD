@@ -38,37 +38,37 @@ return array(
 						'key'                   => 'post_color',
 						'sanitization_callback' => 'sanitize_text_field',
 					),
-					array(
-						'title'                 => 'Issues',
-						'id'                    => '[post_issues]',
-						'label'                 => 'post_issues',
-						'desc'                  => '',
-						'type'                  => 'text_large',
-						// Key must be unique to the particular field
-						'key'                   => 'post_issues',
-						'sanitization_callback' => 'sanitize_text_field',
-					),
-
-					array(
-						'title'                 => 'Actors',
-						'id'                    => '[post_actors]',
-						'label'                 => 'post_actors',
-						'desc'                  => '',
-						'type'                  => 'text_large',
-						// Key must be unique to the particular field
-						'key'                   => 'post_actors',
-						'sanitization_callback' => 'sanitize_text_field',
-					),
-					array(
-						'title'                 => 'Regions',
-						'id'                    => '[post_regions]',
-						'label'                 => 'post_regions',
-						'desc'                  => '',
-						'type'                  => 'text_large',
-						// Key must be unique to the particular field
-						'key'                   => 'post_regions',
-						'sanitization_callback' => 'sanitize_text_field',
-					),
+//					array(
+//						'title'                 => 'Issues',
+//						'id'                    => '[post_issues]',
+//						'label'                 => 'post_issues',
+//						'desc'                  => '',
+//						'type'                  => 'text_large',
+//						// Key must be unique to the particular field
+//						'key'                   => 'post_issues',
+//						'sanitization_callback' => 'sanitize_text_field',
+//					),
+//
+//					array(
+//						'title'                 => 'Actors',
+//						'id'                    => '[post_actors]',
+//						'label'                 => 'post_actors',
+//						'desc'                  => '',
+//						'type'                  => 'text_large',
+//						// Key must be unique to the particular field
+//						'key'                   => 'post_actors',
+//						'sanitization_callback' => 'sanitize_text_field',
+//					),
+//					array(
+//						'title'                 => 'Regions',
+//						'id'                    => '[post_regions]',
+//						'label'                 => 'post_regions',
+//						'desc'                  => '',
+//						'type'                  => 'text_large',
+//						// Key must be unique to the particular field
+//						'key'                   => 'post_regions',
+//						'sanitization_callback' => 'sanitize_text_field',
+//					),
 					array(
 						'title'                 => 'Post Summary',
 						'id'                    => '[post_side_bar_text]',
