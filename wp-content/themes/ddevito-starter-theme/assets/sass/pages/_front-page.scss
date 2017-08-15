@@ -28,6 +28,15 @@
   .frontPageTitleBar__inner{
     @include grid-column(12);
     margin-bottom: 1rem;
+    #sustainable{
+      background: #29c3ec;
+      .text-inner{
+        color: #fff;
+        @include breakpoint(medium){
+          width: 390px;
+        }
+      }
+    }
     #news{
       background: $green;
       .text-inner{
@@ -262,5 +271,58 @@
 .featuredNews__wrap{
   .featuredNews__inner{
     @include grid-row();
+  }
+}
+
+.homepage__banner{
+  @include grid-row();
+  margin-bottom: 1rem;
+  .homepage__banner__inner{
+    @include grid-column(12);
+    .content{
+      background: url("/images/windmill-banner-2.jpg") no-repeat center center;
+      background-size: cover;
+      padding: 1.5rem;
+      @media (max-width: 940px) {
+        //background-image: url("/images/windmill-full.jpg");
+      }
+      p{
+        color: $white;
+        font-size: 1.22rem;
+        @include breakpoint(medium){
+          font-size: 1.55rem;
+          max-width: 85%;
+        }
+        @include breakpoint(large){
+          font-size: 1.75rem;
+          max-width: 70%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1023px) {
+  .homepage__banner__inner{margin-top: 1.5rem;}
+}
+
+.siteIntro{
+  padding-bottom: 1.5rem;
+  @include grid-row();
+  .siteIntro__inner{
+    @include grid-column(12);
+    h3{
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    ul{
+      margin-bottom: 0;
+    }
+    .listWrap{
+      @include grid-row();
+      @include breakpoint(medium){
+        .col{@include grid-column(6)}
+      }
+    }
   }
 }

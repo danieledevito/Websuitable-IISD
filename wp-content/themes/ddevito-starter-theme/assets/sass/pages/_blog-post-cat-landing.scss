@@ -1,21 +1,21 @@
 .archive.category{
   main{background: $white;padding: 0 1.5rem!important;}
-  .page-header{
-    background: $white;
-    .postCatTitle{
-      font-size: 1.5rem;
-      font-weight: 600;
-      margin-bottom: -10px;
-      text-transform: uppercase;
-    }
-    .featuredContent{
-      font-size: 17px;
-    }
-    .postCatDesc{
-      font-size: 2.5rem;
-      text-transform: uppercase;
-      color: #000;
-      padding-top: 0;
+    .page-header{
+        background: $white;
+        .postCatTitle{
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: -10px;
+            text-transform: uppercase;
+          }
+        .featuredContent{
+            font-size: 17px;
+          }
+        .postCatDesc{
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            color: #000;
+            padding-top: 0;
       font-weight: 600;
       line-height: 40px;
       padding-top: 7px;

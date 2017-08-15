@@ -49,7 +49,7 @@
 
   .logo {
     text-align: center;
-    max-width: 200px;
+    max-width: 300px;
   }
   .headerText{
     position: relative;
@@ -78,7 +78,7 @@
         @include grid-column(3);
         text-align: left;
         img{
-          width: 250px;
+          width: 300px;
           max-width: none;
         }
       }
@@ -88,7 +88,7 @@
           margin-top: 23px;
         }
         h1{
-          display: block!important;margin-bottom: -10px;
+          display: block!important;
           font-weight: 600;
         }
         h1,h6{
