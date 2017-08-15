@@ -11,5 +11,5 @@
 
 <p class="site-title"><span class="screen-reader-text"><?php bloginfo( 'name' ); ?></span> <a
 		href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img
-			src="/images/IISD-logo.jpg"
+			src="/images/iisd-logo.png"
 			alt="<?php bloginfo( 'name' ); ?>"></a></p>

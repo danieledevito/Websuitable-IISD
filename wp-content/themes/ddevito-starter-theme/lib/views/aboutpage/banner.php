@@ -10,6 +10,6 @@ if(has_post_thumbnail()){
 }
 ?>>
     <div class="about-banner__inner ">
-        <h1 <?php if(has_post_thumbnail()){echo 'class="hasBg"';} ?>>About Us</h1>
+        <h1 <?php if(has_post_thumbnail()){echo 'class="hasBg"';} ?>><?php the_title() ?></h1>
     </div>
 </div>

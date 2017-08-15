@@ -22,7 +22,7 @@
 		</div>
 		<div class="headerText">
 			<h1>SUSTAINABLE INFRASTRUCTURE PORTAL</h1>
-			<h6>A project by IISD and the MAVA Foundation</h6>
+			<h6>A project by the MAVA Foundation and IISD</h6>
 		</div>
 	</div>
 </div>

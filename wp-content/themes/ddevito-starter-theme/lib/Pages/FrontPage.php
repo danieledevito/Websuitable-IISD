@@ -72,12 +72,7 @@ class FrontPage {
 			'post__not_in' => $this->postsOnPage
 		));
 		$this->recentPapers = array($this->papersPosts[1],$this->papersPosts[2],$this->papersPosts[3]);
-//		foreach($this->papersPosts as $paperPost){
-//			array_push($this->postsOnPage, $paperPost['ID']);
-//		}
-
 		$this->front_meta = CustomData::get_the_post_meta( '_tbsc_front_custom_post', false )[0];
-
 		$this->common_meta = CustomData::get_the_post_meta( '_tbsc_common_custom_post_meta', false )[0];
 	}
 
@@ -102,8 +97,9 @@ class FrontPage {
 	 */
 	public function getPageContent() {
 		echo "<div class='frontpage-content-wrap'><div class='frontpage-content-inner'>";
-		echo "<div class='banner-wrap'><div class='banner-wrap-inner'><h1>Featured</h1></div></div>";
-		include( Views::load_view( TBSC_VIEWS_DIR . 'pages/front-page/featuredMain.php' ) );
+		include( Views::load_view( TBSC_VIEWS_DIR . 'pages/front-page/banner.php' ) );
+		include( Views::load_view( TBSC_VIEWS_DIR . 'pages/front-page/sustainable-infrastructure.php' ) );
+//		include( Views::load_view( TBSC_VIEWS_DIR . 'pages/front-page/featuredMain.php' ) );
 		include( Views::load_view( TBSC_VIEWS_DIR . 'pages/front-page/featuredNews.php' ) );
 		include( Views::load_view( TBSC_VIEWS_DIR . 'pages/front-page/featuredPapers.php' ) );
 		include( Views::load_view( TBSC_VIEWS_DIR . 'pages/front-page/featuredArticles.php' ) );
