@@ -138,6 +138,13 @@
   color: $secondary-color!important;
 }
 
+.primaryMenu .submenu .active>a{
+  color: $light-blue;
+}
+.primaryMenu .is-submenu-item{
+  margin-left: 0!important;
+  margin-right: 0!important;
+}
 @media (max-width: 1023px) {
   .logo{
     margin-right: auto;

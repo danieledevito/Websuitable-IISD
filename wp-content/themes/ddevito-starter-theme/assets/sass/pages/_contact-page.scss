@@ -7,9 +7,6 @@
         background: $white;
         @include grid-column(12);
         padding: 1.3rem;
-        h1{
-          @include grid-column(12);
-        }
         ul{
           list-style: none;
           margin-left: 0;
@@ -18,8 +15,11 @@
       @include breakpoint(large){
         @include grid-column-offset(1);
         @include grid-column(10);
-        ul li{
+        ul{
+          @include grid-row();
+         li{
           @include grid-column(6);
+          }
         }
       }
       .form-section{

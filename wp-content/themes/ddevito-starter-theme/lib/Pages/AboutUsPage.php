@@ -33,7 +33,7 @@ class AboutUsPage {
 
 		add_action('ezra_after_header',array( $this, 'getBanner' )  );
 		add_action( 'ezra_entry',    array( $this, 'do_page_content' ) );
-		add_action( 'ezra_before_footer',    array( $this, 'getAboutUsFooter' ) );
+//		add_action( 'ezra_before_footer',    array( $this, 'getAboutUsFooter' ) );
 
 	}
 

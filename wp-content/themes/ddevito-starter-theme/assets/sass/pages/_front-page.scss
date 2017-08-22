@@ -289,6 +289,8 @@
       p{
         color: $white;
         font-size: 1.22rem;
+        font-family: proxima-nova;
+        margin-bottom: 0;
         @include breakpoint(medium){
           font-size: 1.55rem;
           max-width: 85%;
@@ -317,6 +319,9 @@
     }
     ul{
       margin-bottom: 0;
+      li{
+        font-size: 1.1rem;
+      }
     }
     .listWrap{
       @include grid-row();

@@ -1,8 +1,8 @@
 .about-banner{
   background-size: cover!important;
   .about-banner__inner{
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
     @include grid-row();
     h1{@include grid-column(12);font-size: 2.4rem;
     @include breakpoint(large){
@@ -27,14 +27,34 @@
       padding-top: 5rem;
       padding-bottom: 5rem;
     }
-    @media (min-width: 1200px) {
-      margin-top: 1.5rem;
-    }
+  }
+}
+
+.about-banner-upper{
+  background: $dark-blue;
+  height: 30px;
+  @include breakpoint(medium){
+    
+  }
+  @include breakpoint(large){
+
+  }
+}
+
+.about-banner-upper-custom{
+  background: $orange;
+  height: 8px;
+  @include breakpoint(medium){
+
+  }
+  @include breakpoint(large){
+
   }
 }
 
 .about-page-content{
   @include grid-row();
+
   .about-page-sidebar{
     display: none;
     .about-page-sidebar__inner{
@@ -43,10 +63,17 @@
     }
   }
   .about-page-content__inner{
+    h1{
+      text-transform: uppercase;
+      font-weight: bold;
+    }
     @include grid-column(12);
   }
   @include breakpoint(large){
     .about-page-content__inner{
+      padding-top: 1rem;
+      background: #fff;
+      margin-top: -7rem;
       @include grid-column-offset(1);
       @include grid-column(10);
     }
@@ -54,7 +81,6 @@
 }
 
 .page-template-about-us{
-
   .inner-page-wrap{
     margin-top: 1rem;
   }

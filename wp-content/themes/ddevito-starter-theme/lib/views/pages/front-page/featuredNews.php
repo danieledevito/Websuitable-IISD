@@ -11,7 +11,7 @@
             <div class="bar" id="news">
                 <div class="text-wrapper">
                     <div class="text-inner">
-                        Recent News
+                        News
                     </div>
                 </div>
             </div>

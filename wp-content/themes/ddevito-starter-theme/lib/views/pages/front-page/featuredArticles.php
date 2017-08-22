@@ -11,7 +11,7 @@
             <div class="bar" id="articles">
                 <div class="text-wrapper">
                     <div class="text-inner">
-                        Articles & Publications
+                        Insight From Experts
                     </div>
                 </div>
             </div>
