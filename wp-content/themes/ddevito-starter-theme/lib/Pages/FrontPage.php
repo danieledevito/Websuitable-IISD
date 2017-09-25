@@ -49,29 +49,28 @@ class FrontPage {
 		$this->postsOnPage = array();
 		$this->newsPosts = wp_get_recent_posts(array(
 			'numberposts' => 5,
-			'category_name' => 'news'
+			'category' => '6'
 		));
-		foreach($this->newsPosts as $newsPost){
-			array_push($this->postsOnPage, $newsPost['ID']);
-		}
-		$this->recentNews = array($this->newsPosts[1],$this->newsPosts[2],$this->newsPosts[3]);
+		// foreach($this->newsPosts as $newsPost){
+		// 	array_push($this->postsOnPage, $newsPost['ID']);
+		// }
+		$this->recentNews = array($this->newsPosts[0],$this->newsPosts[1],$this->newsPosts[2]);
 
 		$this->articlePosts = wp_get_recent_posts(array(
 			'numberposts' => 4,
-			'category_name' => 'articles',
-			'post__not_in' => $this->postsOnPage
+			'category' => 8
 		));
-		foreach($this->articlePosts as $articlePost){
-			array_push($this->postsOnPage, $articlePost['ID']);
-		}
-		$this->recentArticles = array($this->articlePosts[1],$this->articlePosts[2],$this->articlePosts[3]);
+		// foreach($this->articlePosts as $articlePost){
+		// 	array_push($this->postsOnPage, $articlePost['ID']);
+		// }
+		$this->recentArticles = array($this->articlePosts[0],$this->articlePosts[1],$this->articlePosts[2]);
 
 		$this->papersPosts = wp_get_recent_posts(array(
 			'numberposts' => 4,
-			'category_name' => 'papers',
-			'post__not_in' => $this->postsOnPage
+			'category' => 7
 		));
-		$this->recentPapers = array($this->papersPosts[1],$this->papersPosts[2],$this->papersPosts[3]);
+		$this->recentPapers = array($this->papersPosts[0],$this->papersPosts[1],$this->papersPosts[2]);
+
 		$this->front_meta = CustomData::get_the_post_meta( '_tbsc_front_custom_post', false )[0];
 		$this->common_meta = CustomData::get_the_post_meta( '_tbsc_common_custom_post_meta', false )[0];
 	}
